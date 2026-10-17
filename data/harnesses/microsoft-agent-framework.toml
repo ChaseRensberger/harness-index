@@ -1,0 +1,11 @@
+name = "Microsoft Agent Framework"
+url = "https://github.com/microsoft/agent-framework"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Unknown"
+status = "Active"
+description = "Successor to AutoGen. The catalog reports 1.0 general availability in April 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

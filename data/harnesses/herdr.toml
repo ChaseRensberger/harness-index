@@ -1,0 +1,12 @@
+name = "herdr"
+url = "https://github.com/herdrdev/herdr"
+categories = [ "Orchestrator" ]
+interfaces = [ "CLI" ]
+source = "Unknown"
+language = "Rust"
+stars = 29900
+status = "Active"
+description = "Terminal agent multiplexer."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

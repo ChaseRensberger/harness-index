@@ -1,0 +1,12 @@
+name = "MiMo Code"
+url = "https://github.com/XiaomiMiMo/MiMo-Code"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 13000
+status = "Active"
+description = "Xiaomi’s official CLI with hooks, worktrees, and headless mode."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

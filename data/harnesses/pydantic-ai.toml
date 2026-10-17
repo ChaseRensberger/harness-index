@@ -1,0 +1,12 @@
+name = "Pydantic AI"
+url = "https://github.com/pydantic/pydantic-ai"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 20700
+status = "Active"
+description = "Type-safe agent framework."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

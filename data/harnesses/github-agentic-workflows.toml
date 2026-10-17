@@ -1,0 +1,12 @@
+name = "GitHub Agentic Workflows"
+url = "https://github.com/github/gh-aw"
+categories = [ "Orchestrator" ]
+interfaces = []
+source = "Unknown"
+language = "Go"
+stars = 4900
+status = "Active"
+description = "Compiles Markdown into GitHub Actions running Copilot, Claude Code, Codex, and Pi."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

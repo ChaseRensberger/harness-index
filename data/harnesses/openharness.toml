@@ -1,0 +1,12 @@
+name = "openHarness"
+url = "https://github.com/zhijiewong/openharness"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript / Python"
+stars = 96
+status = "Active"
+description = "42 tools, hooks, subagents, and npm and Python SDKs."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,12 @@
+name = "Plandex"
+url = "https://github.com/plandex-ai/plandex"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Go"
+stars = 15600
+status = "Dormant"
+description = "Plan-first agent with a 2M-token context. Research reports no commits since October 2025 and a winding-down cloud."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

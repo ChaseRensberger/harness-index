@@ -1,0 +1,11 @@
+name = "Antigravity CLI"
+url = "https://antigravity.google"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Go"
+status = "Active"
+description = "Google’s closed successor to consumer Gemini CLI, introduced in May 2026 with weekly compute caps."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

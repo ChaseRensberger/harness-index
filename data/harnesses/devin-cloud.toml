@@ -1,0 +1,11 @@
+name = "Devin Cloud"
+url = "https://devin.ai"
+categories = [ "Coding" ]
+interfaces = [ "Web" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Asynchronous software engineering agent. The catalog reports an SWE-2 model release in September 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

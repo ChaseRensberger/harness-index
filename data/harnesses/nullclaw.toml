@@ -1,0 +1,13 @@
+name = "NullClaw"
+url = "https://github.com/nullclaw/nullclaw"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Zig"
+stars = 8000
+status = "Active"
+description = "Personal agent in a 678 KB binary."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

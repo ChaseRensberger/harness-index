@@ -1,0 +1,12 @@
+name = "claude-flow"
+url = "https://github.com/ruvnet/claude-flow"
+categories = [ "Orchestrator" ]
+interfaces = []
+source = "Unknown"
+language = "TypeScript"
+stars = 68000
+status = "Active"
+description = "Swarm orchestration over Claude Code. Wraps an existing harness rather than owning a model loop."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

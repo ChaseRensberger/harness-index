@@ -1,0 +1,13 @@
+name = "Open SWE"
+url = "https://github.com/langchain-ai/open-swe"
+categories = [ "Coding" ]
+interfaces = [ "Web" ]
+source = "Open source"
+language = "TypeScript"
+stars = 10400
+status = "Active"
+description = "LangChain’s open asynchronous coding agent."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

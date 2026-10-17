@@ -1,0 +1,12 @@
+name = "Trae Agent"
+url = "https://github.com/bytedance/trae-agent"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 12000
+status = "Dormant"
+description = "ByteDance’s research-oriented software engineering agent. Reported idle since February 5, 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

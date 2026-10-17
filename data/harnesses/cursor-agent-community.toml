@@ -1,0 +1,12 @@
+name = "cursor-agent (community)"
+url = "https://github.com/civai-technologies/cursor-agent"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 132
+status = "Active"
+description = "Community implementation of Cursor’s agent loop."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

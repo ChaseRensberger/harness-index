@@ -1,0 +1,12 @@
+name = "GPT Pilot"
+url = "https://github.com/Pythagora-io/gpt-pilot"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Source-available"
+language = "Python"
+stars = 33700
+status = "Active"
+description = "An early AI-developer app builder; source-available rather than OSI open source."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

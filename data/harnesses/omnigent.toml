@@ -1,0 +1,12 @@
+name = "Omnigent"
+url = "https://github.com/omnigent-ai/omnigent"
+categories = [ "Orchestrator" ]
+interfaces = []
+source = "Unknown"
+language = "Unknown"
+stars = 9000
+status = "Active"
+description = "Databricks meta-harness mixing multiple agents in one session with policy enforcement."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

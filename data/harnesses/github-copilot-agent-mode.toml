@@ -1,0 +1,11 @@
+name = "GitHub Copilot agent mode"
+url = "https://github.com/features/copilot"
+categories = [ "Coding" ]
+interfaces = [ "IDE" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Broad IDE coverage; moved to credit-based billing in 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

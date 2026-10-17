@@ -1,0 +1,12 @@
+name = "METR triframe_inspect"
+url = "https://github.com/METR/triframe_inspect"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 4
+status = "Active"
+description = "Advisor/actor/rater agent scaffold ported to Inspect; notable research use despite low stars."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

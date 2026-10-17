@@ -1,0 +1,13 @@
+name = "jcode"
+url = "https://github.com/1jehuang/jcode"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Rust"
+stars = 17800
+stars_label = "17.8–19.3k"
+status = "Active"
+description = "Memory-lean terminal UI for many parallel sessions, with swarm mode."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,12 @@
+name = "inspect_swe"
+url = "https://github.com/meridianlabs-ai/inspect_swe"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 33
+status = "Active"
+description = "Runs Claude Code, Codex CLI, Gemini CLI, and mini-SWE-agent as Inspect agents."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

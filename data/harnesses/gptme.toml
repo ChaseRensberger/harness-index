@@ -1,0 +1,12 @@
+name = "gptme"
+url = "https://github.com/gptme/gptme"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 4400
+status = "Active"
+description = "Long-lived autonomous agents with git-backed memory."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

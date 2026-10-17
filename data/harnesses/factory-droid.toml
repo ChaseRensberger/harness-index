@@ -1,0 +1,12 @@
+name = "Factory Droid"
+url = "https://factory.ai"
+categories = [ "Coding" ]
+interfaces = [ "CLI", "IDE" ]
+source = "Closed"
+language = "Unknown"
+stars = 2
+status = "Active"
+description = "Multi-model droids across CLI, IDE, Slack, and Linear. Has led Terminal-Bench in the supplied research."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

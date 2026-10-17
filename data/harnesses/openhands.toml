@@ -1,0 +1,13 @@
+name = "OpenHands"
+url = "https://github.com/OpenHands/OpenHands"
+categories = [ "Coding" ]
+interfaces = [ "CLI", "Web" ]
+source = "Open source"
+language = "Python"
+stars = 85000
+stars_label = "85–90k"
+status = "Active"
+description = "Formerly OpenDevin. Sandboxed autonomous runs and headless CI, rebuilt on the V1 Software Agent SDK."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

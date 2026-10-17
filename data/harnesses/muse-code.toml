@@ -1,0 +1,11 @@
+name = "Muse Code"
+url = "https://meta.ai"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Preview"
+description = "Meta coding agent beta with parallel subagents on Muse Spark. Secondary reporting; verify availability."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

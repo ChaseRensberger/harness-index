@@ -1,0 +1,12 @@
+name = "Mistral Vibe"
+url = "https://github.com/mistralai/mistral-vibe"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 4800
+status = "Active"
+description = "Mistral’s official coding CLI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

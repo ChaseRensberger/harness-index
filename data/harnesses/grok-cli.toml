@@ -1,0 +1,12 @@
+name = "Grok CLI"
+url = "https://github.com/superagent-ai/grok-cli"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 3400
+status = "Active"
+description = "Community xAI CLI; predates the official Grok Build."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

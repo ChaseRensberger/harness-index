@@ -1,0 +1,11 @@
+name = "Perplexity Computer / Comet"
+url = "https://perplexity.ai"
+categories = [ "General" ]
+interfaces = [ "Web", "Desktop" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Multi-model orchestration agent and agentic browser."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

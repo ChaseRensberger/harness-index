@@ -1,0 +1,13 @@
+name = "Deep Agents"
+url = "https://github.com/langchain-ai/deepagents"
+categories = [ "Coding", "SDK" ]
+interfaces = [ "CLI", "Library" ]
+source = "Open source"
+language = "Python / TypeScript"
+stars = 30400
+status = "Active"
+description = "LangChain’s batteries-included agent harness and terminal agent: planning, subagents, virtual file system, and approvals."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

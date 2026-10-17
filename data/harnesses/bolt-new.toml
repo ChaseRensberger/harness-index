@@ -1,0 +1,13 @@
+name = "Bolt.new"
+url = "https://github.com/stackblitz/bolt.new"
+categories = [ "Coding" ]
+interfaces = [ "IDE", "Web" ]
+source = "Open source"
+language = "TypeScript"
+stars = 16500
+status = "Active"
+description = "Browser WebContainer-based full-stack agent."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

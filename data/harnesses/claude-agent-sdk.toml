@@ -1,0 +1,13 @@
+name = "Claude Agent SDK"
+url = "https://github.com/anthropics/claude-agent-sdk-python"
+categories = [ "SDK" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python / TypeScript"
+stars = 8300
+status = "Active"
+description = "Claude Code’s harness as a library: tools, hooks, permissions, and subagents. Renamed from Claude Code SDK in September 2025."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

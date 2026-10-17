@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Local configuration and secrets (commit examples, never real credentials)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Build tooling, test output, and caches
+*.tsbuildinfo
+.vite/
+.cache/
+coverage/
+playwright-report/
+test-results/
+.turbo/
+
+# Local OS / editor artifacts
+Thumbs.db
+*~
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

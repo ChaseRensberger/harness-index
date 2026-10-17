@@ -1,0 +1,14 @@
+name = "Strands Agents"
+url = "https://github.com/strands-agents/sdk-python"
+categories = [ "SDK" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python / TypeScript"
+stars = 5000
+stars_label = "5–6.5k+"
+status = "Active"
+description = "AWS’s model-driven loop with steering hooks. Bedrock-first but multi-provider; moving to the harness-sdk monorepo."
+license = "Apache-2.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

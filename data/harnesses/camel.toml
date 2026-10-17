@@ -1,0 +1,11 @@
+name = "CAMEL"
+url = "https://github.com/camel-ai/camel"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Unknown"
+status = "Active"
+description = "Multi-agent framework; current metadata was not re-verified."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

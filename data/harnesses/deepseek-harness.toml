@@ -1,0 +1,14 @@
+name = "DeepSeek Harness"
+url = "https://github.com/deepseek-ai/deepseek-harness"
+categories = [ "Coding", "SDK" ]
+interfaces = [ "CLI", "Web", "Library", "API" ]
+source = "Open source"
+language = "TypeScript"
+stars = 203000
+stars_label = "203–215k"
+status = "Preview"
+description = "Plugin-first harness, including the agent loop. Released Aug 13, 2026; web-first developer preview with promised breaking changes and multiple providers."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

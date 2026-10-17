@@ -1,0 +1,12 @@
+name = "Roo Code"
+url = "https://github.com/RooCodeInc/Roo-Code"
+categories = [ "Coding" ]
+interfaces = [ "CLI", "IDE" ]
+source = "Open source"
+language = "TypeScript"
+stars = 24300
+status = "Archived"
+description = "Archived May 15, 2026, at v3.54.0. Team pivoted to Roomote. Consider Kilo Code or the Zoo Code community fork."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

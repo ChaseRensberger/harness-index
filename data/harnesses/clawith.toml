@@ -1,0 +1,12 @@
+name = "Clawith"
+url = "https://github.com/dataelement/Clawith"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Unknown"
+stars = 4100
+status = "Active"
+description = "OpenClaw-style agents for teams."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

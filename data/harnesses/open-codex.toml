@@ -1,0 +1,12 @@
+name = "open-codex"
+url = "https://github.com/ymichael/open-codex"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 2400
+status = "Active"
+description = "Multi-provider fork of the original TypeScript Codex CLI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

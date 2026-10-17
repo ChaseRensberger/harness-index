@@ -1,0 +1,13 @@
+name = "OpenAI Agents SDK"
+url = "https://github.com/openai/openai-agents-python"
+categories = [ "SDK" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python / TypeScript"
+stars = 30100
+status = "Active"
+description = "Agent loop with handoffs, guardrails, tracing, and native SandboxAgent."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

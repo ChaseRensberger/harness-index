@@ -1,0 +1,12 @@
+name = "Agent Zero"
+url = "https://github.com/agent0ai/agent-zero"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Python"
+stars = 19500
+status = "Active"
+description = "Dockerized Linux computer for agents with hierarchical subordinates. Version 2.x releases through August 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

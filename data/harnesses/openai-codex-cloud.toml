@@ -1,0 +1,11 @@
+name = "OpenAI Codex cloud"
+url = "https://chatgpt.com/codex"
+categories = [ "Coding" ]
+interfaces = [ "Web" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Parallel cloud coding tasks. The CLI is open, but this hosted service is closed. Usage figures in the catalog are vendor reports."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

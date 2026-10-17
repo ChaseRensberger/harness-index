@@ -1,0 +1,12 @@
+name = "Aider"
+url = "https://github.com/Aider-AI/aider"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 49000
+status = "Dormant"
+description = "Git-native pair programmer with a repository map. The supplied research reports no commits since May 22, 2026; treat as stalled."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

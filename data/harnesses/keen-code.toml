@@ -1,0 +1,12 @@
+name = "Keen Code"
+url = "https://github.com/mochow13/keen-code"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Go"
+stars = 59
+status = "Active"
+description = "TurnMemory summaries instead of raw tool traces."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,13 @@
+name = "DeerFlow"
+url = "https://github.com/bytedance/deer-flow"
+categories = [ "General" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 80000
+status = "Active"
+description = "ByteDance’s long-horizon super-agent harness with subagents, sandboxes, and a terminal UI."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

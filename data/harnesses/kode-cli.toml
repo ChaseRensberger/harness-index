@@ -1,0 +1,12 @@
+name = "Kode CLI"
+url = "https://github.com/shareAI-lab/Kode-cli"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 5200
+status = "Active"
+description = "Multi-provider Claude Code-style CLI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,12 @@
+name = "Cline"
+url = "https://github.com/cline/cline"
+categories = [ "Coding" ]
+interfaces = [ "CLI", "IDE", "Library" ]
+source = "Open source"
+language = "TypeScript"
+stars = 69000
+status = "Active"
+description = "One agent across a VS Code extension, CLI, and SDK. Ancestor of Roo and Kilo; supports parallel agents."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

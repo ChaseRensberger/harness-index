@@ -1,0 +1,11 @@
+name = "Cursor cloud agents"
+url = "https://cursor.com"
+categories = [ "Coding" ]
+interfaces = [ "Web" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Background coding agents in isolated VMs, with goals and subagents."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

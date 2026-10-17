@@ -1,0 +1,12 @@
+name = "Dify"
+url = "https://github.com/langgenius/dify"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Unknown"
+language = "Python / TypeScript"
+stars = 144000
+status = "Active"
+description = "Low-code LLM app and agent platform. Separate from a packaged agent harness."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

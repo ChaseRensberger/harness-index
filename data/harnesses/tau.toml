@@ -1,0 +1,13 @@
+name = "Tau"
+url = "https://github.com/huggingface/tau"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 2300
+stars_label = "2.3–2.9k"
+status = "Active"
+description = "Hugging Face’s small, readable harness inspired by Pi; also a teaching codebase."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

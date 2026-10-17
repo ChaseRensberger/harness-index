@@ -1,0 +1,12 @@
+name = "Kodu"
+url = "https://github.com/kodu-ai/claude-coder"
+categories = [ "Coding" ]
+interfaces = [ "IDE" ]
+source = "Source-available"
+language = "TypeScript"
+stars = 5200
+status = "Active"
+description = "Autonomous VS Code agent, also known as Claude Coder."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

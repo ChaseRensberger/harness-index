@@ -1,0 +1,13 @@
+name = "Google ADK"
+url = "https://github.com/google/adk-python"
+categories = [ "SDK" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python / Go / Java / TypeScript"
+stars = 21700
+status = "Active"
+description = "Agent Development Kit 2.0 with A2A protocol support. Stars are for the Python repository."
+license = "Apache-2.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

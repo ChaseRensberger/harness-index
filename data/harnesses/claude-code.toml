@@ -1,0 +1,12 @@
+name = "Claude Code"
+url = "https://github.com/anthropics/claude-code"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "TypeScript"
+stars = 151500
+status = "Active"
+description = "Proprietary harness with subagents, hooks, skills, and MCP. Public repository is for issues, plugins, and changelog—not the runtime. Benchmark claims in the supplied catalog are not independently verified."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

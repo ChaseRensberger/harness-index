@@ -1,0 +1,12 @@
+name = "Kimi Code CLI"
+url = "https://github.com/MoonshotAI/kimi-cli"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 11300
+status = "Active"
+description = "Moonshot’s coding CLI with ACP for IDE clients."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

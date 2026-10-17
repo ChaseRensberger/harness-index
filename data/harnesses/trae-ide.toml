@@ -1,0 +1,11 @@
+name = "Trae IDE"
+url = "https://trae.ai"
+categories = [ "Coding" ]
+interfaces = [ "IDE" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "ByteDance’s VS Code fork; Trae Agent is its separate open research sibling."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

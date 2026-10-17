@@ -1,0 +1,12 @@
+name = "agentty"
+url = "https://github.com/1ay1/agentty"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "C++"
+stars = 608
+status = "Active"
+description = "C++26 single static binary, sandboxed by default, with ACP."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

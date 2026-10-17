@@ -1,0 +1,13 @@
+name = "Pi"
+url = "https://github.com/earendil-works/pi"
+categories = [ "Coding", "SDK" ]
+interfaces = [ "CLI", "Library" ]
+source = "Open source"
+language = "TypeScript"
+stars = 113000
+status = "Active"
+description = "Minimal coding harness by Mario Zechner and Armin Ronacher. Includes a reusable agent core, unified LLM API, and TUI library; the base for several other harnesses."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

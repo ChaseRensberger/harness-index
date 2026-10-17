@@ -1,0 +1,12 @@
+name = "Continue"
+url = "https://github.com/continuedev/continue"
+categories = [ "Coding" ]
+interfaces = [ "CLI", "IDE" ]
+source = "Open source"
+language = "TypeScript"
+stars = 36000
+status = "Uncertain"
+description = "Pivoted to CI checks. Reports of a read-only repository and acquisition by Cursor are unconfirmed; verify before adopting."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

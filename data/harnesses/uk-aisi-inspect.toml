@@ -1,0 +1,13 @@
+name = "UK AISI Inspect"
+url = "https://github.com/UKGovernmentBEIS/inspect_ai"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 3000
+status = "Active"
+description = "Frontier-evaluation framework with built-in agents, sandboxes, and a log viewer. METR and Apollo migrated from in-house tooling."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

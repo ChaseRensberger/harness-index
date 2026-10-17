@@ -1,0 +1,13 @@
+name = "Prime Agent"
+url = "https://github.com/PrimeIntellect-ai/prime-agent"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python / TypeScript"
+stars = 17000
+stars_label = "17–21k"
+status = "Active"
+description = "Prime Intellect’s RLM agent: a persistent IPython kernel is its only tool. Continual Harness is built on Pi."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

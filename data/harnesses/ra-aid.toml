@@ -1,0 +1,12 @@
+name = "RA.Aid"
+url = "https://github.com/ai-christianson/RA.Aid"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 2200
+status = "Active"
+description = "LangGraph research-to-plan-to-implementation pipeline."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

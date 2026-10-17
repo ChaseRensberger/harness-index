@@ -1,0 +1,12 @@
+name = "Smol Developer"
+url = "https://github.com/smol-ai/developer"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 12200
+status = "Dormant"
+description = "Legacy 2023-era generate-a-whole-codebase agent."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

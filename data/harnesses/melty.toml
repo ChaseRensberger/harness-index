@@ -1,0 +1,13 @@
+name = "Melty"
+url = "https://github.com/meltylabs/melty"
+categories = [ "Coding" ]
+interfaces = [ "IDE" ]
+source = "Open source"
+language = "TypeScript"
+stars = 5400
+status = "Dormant"
+description = "Chat-first editor, largely a legacy project."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

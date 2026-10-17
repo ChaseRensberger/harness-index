@@ -1,0 +1,11 @@
+name = "Devin Desktop"
+url = "https://devin.ai"
+categories = [ "Coding" ]
+interfaces = [ "IDE", "Desktop" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Formerly Windsurf. Renamed June 2, 2026; Cascade retired in favor of Devin Local. Hosts external agents through ACP."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

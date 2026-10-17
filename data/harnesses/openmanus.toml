@@ -1,0 +1,13 @@
+name = "OpenManus"
+url = "https://github.com/FoundationAgents/OpenManus"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Python"
+stars = 58700
+status = "Active"
+description = "Open Manus-style harness with general and data-analysis agents."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

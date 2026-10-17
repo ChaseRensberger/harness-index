@@ -1,0 +1,12 @@
+name = "AgenticSeek"
+url = "https://github.com/Fosowl/agenticSeek"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Python"
+stars = 27500
+status = "Active"
+description = "Fully local Manus alternative."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

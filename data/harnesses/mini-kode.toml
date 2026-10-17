@@ -1,0 +1,12 @@
+name = "Mini-Kode"
+url = "https://github.com/minmaxflow/mini-kode"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 305
+status = "Active"
+description = "Educational reference coding CLI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

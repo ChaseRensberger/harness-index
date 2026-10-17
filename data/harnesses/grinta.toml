@@ -1,0 +1,12 @@
+name = "Grinta"
+url = "https://github.com/josephsenior/Grinta-Coding-Agent"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 29
+status = "Active"
+description = "Long-horizon coding agent with validation-gated completion."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

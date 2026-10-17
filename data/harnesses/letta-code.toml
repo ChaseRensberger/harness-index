@@ -1,0 +1,12 @@
+name = "Letta Code"
+url = "https://github.com/letta-ai/letta-code"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 3000
+status = "Active"
+description = "Memory-first coding agent on Letta, formerly MemGPT."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

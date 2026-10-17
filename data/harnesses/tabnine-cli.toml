@@ -1,0 +1,11 @@
+name = "Tabnine CLI"
+url = "https://www.tabnine.com"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Enterprise coding CLI. The supplied catalog does not provide a verified star count."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

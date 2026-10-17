@@ -1,0 +1,12 @@
+name = "DeepSeek Reasonix"
+url = "https://github.com/esengine/DeepSeek-Reasonix"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Go"
+stars = 35000
+status = "Active"
+description = "Single binary for long unattended runs with prefix-cache-stable context design."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

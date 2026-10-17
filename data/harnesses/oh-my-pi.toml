@@ -1,0 +1,13 @@
+name = "OH-MY-PI"
+url = "https://github.com/can1357/oh-my-pi"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript / Rust"
+stars = 25000
+stars_label = "25–30k"
+status = "Active"
+description = "Pi derivative with anchored edits, LSP, browser, and subagents."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

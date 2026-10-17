@@ -1,0 +1,12 @@
+name = "zot"
+url = "https://github.com/patriceckhart/zot"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Unknown"
+stars = 316
+status = "Active"
+description = "Zero-overhead harness with TUI, JSON, and RPC modes."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

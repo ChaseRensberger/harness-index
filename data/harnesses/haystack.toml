@@ -1,0 +1,11 @@
+name = "Haystack"
+url = "https://github.com/deepset-ai/haystack"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Unknown"
+status = "Active"
+description = "Application and agent framework; current metadata was not re-verified."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

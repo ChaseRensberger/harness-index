@@ -1,0 +1,12 @@
+name = "ZeroClaw"
+url = "https://github.com/zeroclaw-labs/zeroclaw"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Rust"
+stars = 32600
+status = "Active"
+description = "Trait-pluggable runtime designed to use less than 5 MB of RAM."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

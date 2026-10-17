@@ -1,0 +1,12 @@
+name = "Qwen Code"
+url = "https://github.com/QwenLM/qwen-code"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 27000
+status = "Active"
+description = "Alibaba’s fork of Gemini CLI and an open migration path for its users."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

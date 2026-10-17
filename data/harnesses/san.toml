@@ -1,0 +1,12 @@
+name = "San"
+url = "https://github.com/genai-io/san"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Go"
+stars = 73
+status = "Active"
+description = "Runs Claude Code skills and plugins unmodified on any provider."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

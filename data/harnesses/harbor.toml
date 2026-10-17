@@ -1,0 +1,13 @@
+name = "Harbor"
+url = "https://github.com/harbor-framework/harbor"
+categories = [ "Evaluation" ]
+interfaces = [ "CLI", "Library" ]
+source = "Open source"
+language = "Python"
+stars = 6200
+status = "Active"
+description = "Terminal-Bench container runner supporting multiple agents. Includes the Terminus-2 reference agent and RL rollout generation."
+license = "Apache-2.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

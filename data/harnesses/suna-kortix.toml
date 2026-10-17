@@ -1,0 +1,13 @@
+name = "Suna / Kortix"
+url = "https://github.com/kortix-ai/suna"
+categories = [ "General" ]
+interfaces = []
+source = "Source-available"
+language = "Python / TypeScript"
+stars = 34800
+status = "Active"
+description = "Generalist agent and AI management system. Elastic License 2.0 is source-available, not OSI open source."
+license = "ELv2"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

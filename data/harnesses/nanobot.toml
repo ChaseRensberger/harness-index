@@ -1,0 +1,13 @@
+name = "nanobot"
+url = "https://github.com/HKUDS/nanobot"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Python"
+stars = 47000
+status = "Active"
+description = "Approximately 4,000-line OpenClaw rewrite."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

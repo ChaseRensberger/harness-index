@@ -1,0 +1,12 @@
+name = "Auggie"
+url = "https://github.com/augmentcode/auggie"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+stars = 270
+status = "Active"
+description = "Augment’s context-engine CLI with headless print mode for CI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

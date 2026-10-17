@@ -1,0 +1,12 @@
+name = "Open Interpreter"
+url = "https://github.com/openinterpreter/open-interpreter"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 68000
+status = "Active"
+description = "An early code-executing agent for doing things on your machine."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

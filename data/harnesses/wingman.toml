@@ -1,0 +1,13 @@
+name = "Wingman"
+url = "https://wingman.actor"
+categories = [ "SDK" ]
+interfaces = [ "CLI", "Web", "API", "Library" ]
+source = "Open source"
+language = "Go"
+status = "Preview"
+description = "Client-agnostic agent runtime with a durable run queue, reconnectable events, per-tool permissions, and Go or JSON-RPC plugins. Its site explicitly warns it is not production-ready. Ships a provider-agnostic model SDK and a console client."
+provenance = "website"
+source_url = "https://wingman.actor"
+source_checked_at = "2026-10-17"
+snapshot = "2026-10-17"
+last_updated = "2026-10-17"

@@ -1,0 +1,12 @@
+name = "METR Vivaria"
+url = "https://github.com/METR/vivaria"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "TypeScript / Python"
+stars = 141
+status = "Maintenance"
+description = "METR’s former evaluation platform. Feature development ramped down in favor of Inspect."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

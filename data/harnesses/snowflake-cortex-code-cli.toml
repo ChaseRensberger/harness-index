@@ -1,0 +1,11 @@
+name = "Snowflake Cortex Code CLI"
+url = "https://www.snowflake.com"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Vertical coding CLI from Snowflake; detailed metadata was not supplied."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

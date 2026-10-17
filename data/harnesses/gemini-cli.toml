@@ -1,0 +1,12 @@
+name = "Gemini CLI"
+url = "https://github.com/google-gemini/gemini-cli"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 107000
+status = "Uncertain"
+description = "Consumer access ended June 18, 2026. Still maintained for Code Assist and API-key users; consumer users should consider Qwen Code or Antigravity CLI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

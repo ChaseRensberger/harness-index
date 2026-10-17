@@ -1,0 +1,12 @@
+name = "METR inspect-agents"
+url = "https://github.com/METR/inspect-agents"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 10
+status = "Active"
+description = "METR’s actual agent scaffolds ported to Inspect; retained despite being below the 20-star inclusion threshold."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

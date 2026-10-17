@@ -1,0 +1,12 @@
+name = "PicoClaw"
+url = "https://github.com/sipeed/picoclaw"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Go"
+stars = 29900
+status = "Active"
+description = "Personal agent designed to run on $10 hardware."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

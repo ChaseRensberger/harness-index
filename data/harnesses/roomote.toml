@@ -1,0 +1,11 @@
+name = "Roomote"
+url = "https://roomote.dev"
+categories = [ "Coding" ]
+interfaces = [ "Web" ]
+source = "Closed"
+language = "Unknown"
+status = "Preview"
+description = "The Roo team’s early Slack-first cloud agent."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

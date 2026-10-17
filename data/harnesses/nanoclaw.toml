@@ -1,0 +1,12 @@
+name = "NanoClaw"
+url = "https://github.com/gavrielc/nanoclaw"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "TypeScript"
+stars = 30500
+status = "Active"
+description = "Container-isolated OpenClaw alternative built on Anthropic’s Agent SDK."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,11 @@
+name = "Kiro CLI"
+url = "https://kiro.dev"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "AWS coding CLI with ACP; successor to Amazon Q Developer CLI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

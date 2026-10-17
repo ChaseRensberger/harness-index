@@ -1,0 +1,12 @@
+name = "AutoCodeRover"
+url = "https://github.com/AutoCodeRoverSG/auto-code-rover"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Source-available"
+language = "Python"
+stars = 3100
+status = "Active"
+description = "AST and code-search-driven program repair."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

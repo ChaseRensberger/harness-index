@@ -1,0 +1,12 @@
+name = "g3"
+url = "https://github.com/dhanji/g3"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Rust"
+stars = 517
+status = "Preview"
+description = "Experimental Rust agent with skills."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,11 @@
+name = "Manus"
+url = "https://manus.im"
+categories = [ "General" ]
+interfaces = [ "Web" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "General-purpose agent. The supplied catalog reports a blocked Meta acquisition and resumed independent operation in September 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

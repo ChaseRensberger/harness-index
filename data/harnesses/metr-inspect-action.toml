@@ -1,0 +1,12 @@
+name = "METR inspect-action"
+url = "https://github.com/METR/inspect-action"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 25
+status = "Archived"
+description = "Archived May 6, 2026. Moved to METR/hawk for Inspect in the cloud."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,11 @@
+name = "Devin CLI"
+url = "https://devin.ai"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Launches Devin Cloud sessions from the terminal."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

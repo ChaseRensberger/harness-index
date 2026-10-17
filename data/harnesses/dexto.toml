@@ -1,0 +1,12 @@
+name = "Dexto"
+url = "https://github.com/truffle-ai/dexto"
+categories = [ "Coding", "General" ]
+interfaces = [ "CLI", "Web", "API" ]
+source = "Open source"
+language = "TypeScript"
+stars = 646
+status = "Active"
+description = "Coding agent and general harness with CLI, web, and API."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

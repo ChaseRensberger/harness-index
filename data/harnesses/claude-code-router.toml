@@ -1,0 +1,12 @@
+name = "claude-code-router"
+url = "https://github.com/musistudio/claude-code-router"
+categories = [ "Orchestrator" ]
+interfaces = []
+source = "Unknown"
+language = "TypeScript"
+stars = 36700
+status = "Active"
+description = "Runs Claude Code against other providers."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

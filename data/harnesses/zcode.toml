@@ -1,0 +1,11 @@
+name = "ZCode"
+url = "https://zcode.z.ai"
+categories = [ "Coding" ]
+interfaces = [ "Desktop" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Z.AI’s proprietary desktop harness for GLM-5.3. Only the plugin repository is Apache-2.0; the runtime is not open source."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,12 @@
+name = "Claude Engineer"
+url = "https://github.com/Doriandarko/claude-engineer"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Python"
+stars = 11200
+status = "Active"
+description = "Early community Claude agent CLI that can create its own tools."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

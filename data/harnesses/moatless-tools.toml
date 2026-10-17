@@ -1,0 +1,12 @@
+name = "Moatless Tools"
+url = "https://github.com/aorwall/moatless-tools"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 608
+status = "Active"
+description = "Lean tool-based SWE harness; tree search lives in the separate moatless-tree-search repository."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

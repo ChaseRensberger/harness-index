@@ -1,0 +1,12 @@
+name = "NemoClaw"
+url = "https://github.com/NVIDIA/NemoClaw"
+categories = [ "Orchestrator" ]
+interfaces = []
+source = "Unknown"
+language = "Unknown"
+stars = 22200
+status = "Active"
+description = "NVIDIA sandboxed OpenClaw provisioning."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

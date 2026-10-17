@@ -1,0 +1,13 @@
+name = "OpenCursor"
+url = "https://github.com/PawanOsman/OpenCursor"
+categories = [ "Coding" ]
+interfaces = [ "IDE" ]
+source = "Open source"
+language = "TypeScript"
+stars = 6000
+status = "Active"
+description = "VS Code agent extension."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

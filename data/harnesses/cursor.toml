@@ -1,0 +1,12 @@
+name = "Cursor"
+url = "https://cursor.com"
+categories = [ "Coding" ]
+interfaces = [ "IDE", "Desktop", "Web" ]
+source = "Closed"
+language = "TypeScript"
+stars = 33000
+status = "Active"
+description = "AI IDE with cloud agents and coordinator agents. Stars refer to the public issue repository, not open runtime code. The catalog reports acquisition by SpaceX in August 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

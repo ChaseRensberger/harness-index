@@ -1,0 +1,12 @@
+name = "LangGraph"
+url = "https://github.com/langchain-ai/langgraph"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python / TypeScript"
+stars = 39800
+status = "Active"
+description = "Graph and state-machine runtime for explicit agent workflows."
+provenance = "catalog"
+snapshot = "2026-08-15"
+last_updated = "2026-10-17"

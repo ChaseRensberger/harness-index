@@ -1,0 +1,12 @@
+name = "Orca"
+url = "https://github.com/stablyai/orca"
+categories = [ "Orchestrator" ]
+interfaces = []
+source = "Unknown"
+language = "TypeScript"
+stars = 46900
+status = "Active"
+description = "Stably’s parallel agents in git worktrees."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

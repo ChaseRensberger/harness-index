@@ -1,0 +1,11 @@
+name = "Google Antigravity"
+url = "https://antigravity.google"
+categories = [ "Coding" ]
+interfaces = [ "IDE", "Desktop" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Agent-first VS Code fork using reviewable Artifacts. The 2.0 desktop app runs parallel agents."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

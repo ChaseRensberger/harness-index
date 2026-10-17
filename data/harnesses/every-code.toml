@@ -1,0 +1,12 @@
+name = "Every Code"
+url = "https://github.com/just-every/code"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Rust"
+stars = 3900
+status = "Active"
+description = "Codex fork with multi-provider orchestration and browser support."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

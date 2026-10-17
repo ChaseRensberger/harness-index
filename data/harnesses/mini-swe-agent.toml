@@ -1,0 +1,13 @@
+name = "mini-SWE-agent"
+url = "https://github.com/SWE-agent/mini-swe-agent"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 8600
+status = "Active"
+description = "Minimal neutral agent used by Vals.ai Terminal-Bench 4.0, DeepSWE, and SWE-Serve. Sources disagree on stars (5.4k versus 8.6k); benchmark claims are imported, not independently verified."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

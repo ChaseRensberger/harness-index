@@ -1,0 +1,10 @@
+name = "Mentat CLI"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Uncertain"
+description = "Listed as an enterprise or vertical CLI; metadata, website, and current availability require verification."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

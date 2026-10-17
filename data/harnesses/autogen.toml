@@ -1,0 +1,12 @@
+name = "AutoGen"
+url = "https://github.com/microsoft/autogen"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python / .NET"
+stars = 60400
+status = "Maintenance"
+description = "Maintenance mode; the catalog reports no push since April 15, 2026. Successor: Microsoft Agent Framework."
+provenance = "catalog"
+snapshot = "2026-08-15"
+last_updated = "2026-10-17"

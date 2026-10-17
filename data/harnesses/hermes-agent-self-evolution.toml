@@ -1,0 +1,13 @@
+name = "Hermes Agent Self-Evolution"
+url = "https://github.com/NousResearch/hermes-agent-self-evolution"
+categories = [ "Evaluation" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 5500
+status = "Active"
+description = "DSPy and GEPA optimization of harness skills and prompts."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

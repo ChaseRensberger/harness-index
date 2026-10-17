@@ -1,0 +1,12 @@
+name = "picocode"
+url = "https://github.com/jondot/picocode"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "Rust"
+stars = 57
+status = "Active"
+description = "Minimal CI and codemod agent."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,13 @@
+name = "Docker Agent"
+url = "https://github.com/docker/docker-agent"
+categories = [ "SDK" ]
+interfaces = [ "CLI", "Library" ]
+source = "Open source"
+language = "Go"
+stars = 3300
+status = "Active"
+description = "Docker CLI plugin with YAML agent teams packaged to OCI registries."
+license = "Apache-2.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

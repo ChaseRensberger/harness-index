@@ -1,0 +1,13 @@
+name = "Stagewise"
+url = "https://github.com/stagewise-io/stagewise"
+categories = [ "Coding" ]
+interfaces = [ "IDE" ]
+source = "Open source"
+language = "TypeScript"
+stars = 6800
+status = "Active"
+description = "Agentic IDE with live application previews."
+license = "AGPL"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

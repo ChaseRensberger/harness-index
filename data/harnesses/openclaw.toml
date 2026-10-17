@@ -1,0 +1,13 @@
+name = "OpenClaw"
+url = "https://github.com/openclaw/openclaw"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "TypeScript"
+stars = 391600
+status = "Active"
+description = "Messaging-first personal agent with skills. Version 2.0 shipped August 30, 2026 under the OpenClaw Foundation. Stars reflect the October 7 catalog snapshot."
+license = "MIT"
+provenance = "catalog"
+snapshot = "2026-10-07"
+last_updated = "2026-10-17"

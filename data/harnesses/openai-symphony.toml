@@ -1,0 +1,13 @@
+name = "OpenAI Symphony"
+url = "https://github.com/openai/symphony"
+categories = [ "Coding" ]
+interfaces = [ "API" ]
+source = "Open source"
+language = "Elixir"
+stars = 26700
+status = "Active"
+description = "Turns tracker issues into isolated Codex App Server runs with proof of work."
+license = "Apache-2.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

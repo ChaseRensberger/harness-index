@@ -1,0 +1,12 @@
+name = "Groq Code CLI"
+url = "https://github.com/build-with-groq/groq-code-cli"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Open source"
+language = "TypeScript"
+stars = 740
+status = "Active"
+description = "Lightweight Groq-native coding CLI."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

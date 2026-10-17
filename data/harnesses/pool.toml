@@ -1,0 +1,12 @@
+name = "pool"
+url = "https://github.com/poolsideai/pool"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+stars = 403
+status = "Active"
+description = "Poolside’s Laguna-backed CLI with an ACP client/server."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

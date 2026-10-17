@@ -1,0 +1,13 @@
+name = "OpenHands Agent SDK"
+url = "https://github.com/OpenHands/software-agent-sdk"
+categories = [ "SDK" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 1260
+status = "Active"
+description = "OpenHands V1 software agent core; approximately 1,260 stars by mid-October 2026."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

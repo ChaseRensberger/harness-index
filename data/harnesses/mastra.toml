@@ -1,0 +1,13 @@
+name = "Mastra"
+url = "https://github.com/mastra-ai/mastra"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "TypeScript"
+stars = 23000
+stars_label = "23–25k"
+status = "Active"
+description = "TypeScript-first agents and workflows."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

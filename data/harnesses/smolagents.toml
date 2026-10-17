@@ -1,0 +1,13 @@
+name = "smolagents"
+url = "https://github.com/huggingface/smolagents"
+categories = [ "SDK" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 29900
+status = "Active"
+description = "Small code-acting agent library, approximately 1,000 lines of core code."
+license = "Apache-2.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

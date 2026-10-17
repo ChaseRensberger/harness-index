@@ -1,0 +1,13 @@
+name = "Hermes Agent"
+url = "https://github.com/NousResearch/hermes-agent"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Python"
+stars = 254000
+status = "Active"
+description = "Nous Research’s self-improving agent: creates and refines skills, keeps a persistent user model, and supports 15+ chat channels and sandbox backends."
+license = "MIT"
+provenance = "catalog"
+snapshot = "2026-10-16"
+last_updated = "2026-10-17"

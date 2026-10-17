@@ -1,0 +1,13 @@
+name = "OWL"
+url = "https://github.com/camel-ai/owl"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Python"
+stars = 11000
+stars_label = "11k+†"
+status = "Active"
+description = "CAMEL-AI general agent. Count is an early-2025 figure, not a verified October 2026 snapshot."
+provenance = "catalog"
+snapshot = "Early 2025"
+last_updated = "2026-10-17"

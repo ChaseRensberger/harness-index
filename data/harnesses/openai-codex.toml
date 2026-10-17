@@ -1,0 +1,13 @@
+name = "OpenAI Codex"
+url = "https://github.com/openai/codex"
+categories = [ "Coding", "SDK" ]
+interfaces = [ "CLI", "Desktop", "Library", "API" ]
+source = "Open source"
+language = "Rust"
+stars = 129500
+status = "Active"
+description = "Sandboxed coding harness with local-model support. Its App Server powers the Codex desktop app, SDK, cloud, and third-party orchestrators."
+license = "Apache-2.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

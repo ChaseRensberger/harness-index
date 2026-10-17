@@ -1,0 +1,11 @@
+name = "ChatGPT agent"
+url = "https://chatgpt.com"
+categories = [ "General" ]
+interfaces = [ "Web" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "General-purpose OpenAI agent. The catalog also describes always-on dots agents and Atlas browser agent mode."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

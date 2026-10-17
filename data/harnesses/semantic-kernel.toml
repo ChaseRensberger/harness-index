@@ -1,0 +1,11 @@
+name = "Semantic Kernel"
+url = "https://github.com/microsoft/semantic-kernel"
+categories = [ "Framework" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Unknown"
+status = "Active"
+description = "Agent orchestration framework; current metadata was not re-verified."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

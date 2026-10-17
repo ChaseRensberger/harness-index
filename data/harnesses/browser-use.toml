@@ -1,0 +1,13 @@
+name = "browser-use"
+url = "https://github.com/browser-use/browser-use"
+categories = [ "General" ]
+interfaces = [ "Library" ]
+source = "Open source"
+language = "Python"
+stars = 118000
+status = "Active"
+description = "Open browser-driving agent harness."
+license = "MIT"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,11 @@
+name = "Amp"
+url = "https://ampcode.com"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Sourcegraph’s agent. The catalog reports free use with a bring-your-own subscription or key from September 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

@@ -1,0 +1,12 @@
+name = "Multica"
+url = "https://github.com/multica-ai/multica"
+categories = [ "Orchestrator" ]
+interfaces = []
+source = "Unknown"
+language = "Go"
+stars = 46300
+status = "Active"
+description = "Assigns issues to 20 agent CLIs like teammates."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

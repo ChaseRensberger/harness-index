@@ -1,0 +1,12 @@
+name = "Dyad"
+url = "https://github.com/dyad-sh/dyad"
+categories = [ "Coding" ]
+interfaces = [ "IDE", "Desktop" ]
+source = "Source-available"
+language = "TypeScript"
+stars = 21000
+status = "Active"
+description = "Local desktop app builder."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

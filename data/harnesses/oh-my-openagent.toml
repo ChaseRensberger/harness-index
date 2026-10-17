@@ -1,0 +1,13 @@
+name = "Oh My OpenAgent"
+url = "https://github.com/code-yeongyu/oh-my-openagent"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Source-available"
+language = "TypeScript"
+stars = 68000
+status = "Active"
+description = "Multi-harness layer over OpenCode, Codex, and Pi with Team Mode. Source-available, not OSI open source."
+license = "SUL-1.0"
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

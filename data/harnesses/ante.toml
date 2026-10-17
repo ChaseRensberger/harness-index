@@ -1,0 +1,12 @@
+name = "Ante"
+url = "https://github.com/AntigmaLabs/ante-preview"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Rust"
+stars = 1800
+status = "Preview"
+description = "Single binary with embedded llama.cpp. Strong Terminal-Bench 2.1 results are reported by the catalog."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

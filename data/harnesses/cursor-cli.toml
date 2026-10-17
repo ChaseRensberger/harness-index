@@ -1,0 +1,11 @@
+name = "Cursor CLI"
+url = "https://cursor.com/cli"
+categories = [ "Coding" ]
+interfaces = [ "CLI" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Cursor’s agent outside the editor, with headless and CI use."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

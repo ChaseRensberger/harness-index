@@ -1,0 +1,12 @@
+name = "LettaBot"
+url = "https://github.com/letta-ai/lettabot"
+categories = [ "General" ]
+interfaces = []
+source = "Open source"
+language = "Unknown"
+stars = 327
+status = "Active"
+description = "Multi-channel assistant with persistent memory."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

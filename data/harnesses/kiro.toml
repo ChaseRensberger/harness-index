@@ -1,0 +1,11 @@
+name = "Kiro"
+url = "https://kiro.dev"
+categories = [ "Coding" ]
+interfaces = [ "IDE", "Desktop" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "AWS’s spec-driven IDE; replaced Amazon Q Developer."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"

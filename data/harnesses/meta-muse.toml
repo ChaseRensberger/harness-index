@@ -1,0 +1,11 @@
+name = "Meta Muse"
+url = "https://meta.ai"
+categories = [ "General" ]
+interfaces = [ "Web" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Meta’s consumer personal agent, reported launched in September 2026."
+provenance = "catalog"
+snapshot = "Aug–Oct 2026"
+last_updated = "2026-10-17"
