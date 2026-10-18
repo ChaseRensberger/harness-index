@@ -1,4 +1,4 @@
-import { categories, interfaces, sources, statuses, isAdjacent, type Harness } from '../data/harnesses'
+import { categories, interfaces, sources, statuses, type Harness } from '../data/harnesses'
 
 export const sortKeys = ['name', 'category', 'interfaces', 'source', 'language', 'stars', 'status'] as const
 export type SortKey = typeof sortKeys[number]
@@ -9,7 +9,6 @@ export type CatalogSearch = {
   interface?: typeof interfaces[number]
   source?: typeof sources[number]
   status?: typeof statuses[number]
-  adjacent?: boolean
   sort?: SortKey
   desc?: boolean
 }
@@ -25,7 +24,6 @@ export function validateSearch(search: Record<string, unknown>): CatalogSearch {
     interface: member(interfaces, search.interface),
     source: member(sources, search.source),
     status: member(statuses, search.status),
-    adjacent: search.adjacent === true ? true : undefined,
     sort: member(sortKeys, search.sort),
     desc: typeof search.desc === 'boolean' ? search.desc : undefined,
   }
@@ -34,7 +32,6 @@ export function validateSearch(search: Record<string, unknown>): CatalogSearch {
 export function filterHarnesses(data: Harness[], search: CatalogSearch) {
   const terms = search.q?.toLowerCase().trim().split(/\s+/).filter(Boolean) ?? []
   return data.filter((harness) => {
-    if (!search.adjacent && isAdjacent(harness)) return false
     if (search.category && !harness.categories.includes(search.category)) return false
     if (search.interface && !harness.interfaces.includes(search.interface)) return false
     if (search.source && harness.source !== search.source) return false

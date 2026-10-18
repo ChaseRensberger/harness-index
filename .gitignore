@@ -26,6 +26,7 @@ coverage/
 playwright-report/
 test-results/
 .turbo/
+.tanstack/
 
 # Local OS / editor artifacts
 Thumbs.db

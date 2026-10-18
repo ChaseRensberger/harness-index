@@ -1,12 +1,13 @@
 import { ArrowLeftIcon, ArrowUpRightIcon, CheckIcon, CopyIcon } from '@phosphor-icons/react'
 import { useEffect, useState, type ReactNode } from 'react'
-import { Link } from '@tanstack/react-router'
+import { getRouteApi, Link } from '@tanstack/react-router'
 import { formatDate, formatStars } from '../data/harnesses'
 import { harnesses } from 'virtual:harnesses'
-import { harnessRoute } from '../router'
 import { Button } from './ui/button'
 import { Badge } from './ui/badge'
 import { SourceBadge, StatusLabel } from './harness-labels'
+
+const harnessRoute = getRouteApi('/harnesses/$harnessId')
 
 function DetailRow({ label, children }: { label: string; children: ReactNode }) {
   return <div className="grid grid-cols-[105px_1fr] gap-5 border-b py-4 text-xs last:border-b-0 sm:grid-cols-[150px_1fr]">
@@ -56,9 +57,9 @@ export function HarnessDetail() {
         <section aria-labelledby="specifications-heading">
           <h2 id="specifications-heading" className="eyebrow mb-5 text-muted-foreground">Overview</h2>
           <dl className="border-y">
-            <DetailRow label="Category"><div className="flex flex-wrap gap-2">{harness.categories.map((category) => <Link to="/" key={category} search={{ category, adjacent: category === 'Framework' || category === 'Orchestrator' ? true : undefined }} className="hover:underline"><Badge>{category}</Badge></Link>)}</div></DetailRow>
+            <DetailRow label="Category"><div className="flex flex-wrap gap-2">{harness.categories.map((category) => <Link to="/" key={category} search={{ category }} className="hover:underline"><Badge>{category}</Badge></Link>)}</div></DetailRow>
             <DetailRow label="Source"><SourceBadge source={harness.source} /></DetailRow>
-            <DetailRow label="License">{harness.license ?? <span className="text-muted-foreground">Not verified</span>}</DetailRow>
+            <DetailRow label="License">{harness.licenseUrl ? <a href={harness.licenseUrl} target="_blank" rel="noreferrer" className="underline">{harness.license} ↗</a> : harness.license ?? <span className="text-muted-foreground">Not verified</span>}</DetailRow>
             <DetailRow label="Interfaces">{harness.interfaces.length ? harness.interfaces.join(', ') : <span className="text-muted-foreground">Not documented</span>}</DetailRow>
             <DetailRow label="Language">{harness.language === 'Unknown' ? <span className="text-muted-foreground">Not documented</span> : harness.language}</DetailRow>
             <DetailRow label="GitHub stars"><span className="tabular-nums">{formatStars(harness)}</span><span className="ml-3 text-[11px] text-muted-foreground">{harness.stars === undefined ? 'Not recorded' : 'Approximate snapshot, not live'}</span></DetailRow>
@@ -72,10 +73,12 @@ export function HarnessDetail() {
             <DetailRow label="Snapshot">{harness.snapshot}</DetailRow>
             <DetailRow label="Source">{harness.sourceUrl ? <a href={harness.sourceUrl} target="_blank" rel="noreferrer" className="underline">{harness.provenance === 'website' ? 'Website' : 'Research source'} ↗</a> : 'User-supplied research catalog'}</DetailRow>
             {harness.sourceCheckedAt && <DetailRow label="Checked"><time dateTime={harness.sourceCheckedAt}>{formatDate(harness.sourceCheckedAt)}</time></DetailRow>}
+            {harness.licenseCheckedAt && <DetailRow label="License checked"><time dateTime={harness.licenseCheckedAt}>{formatDate(harness.licenseCheckedAt)}</time></DetailRow>}
           </dl>
           <div className="rounded-md border bg-muted/40 p-5 text-xs leading-6 text-muted-foreground">
             <p className="mb-2 font-medium text-foreground">Verification</p>
-            <p>{harness.provenance === 'catalog' ? 'Imported research has not been independently verified. “Active” means listed as current in the catalog, not a live activity check.' : 'Metadata was checked against the linked source.'}</p>
+            <p>{harness.provenance === 'catalog' ? 'Other imported metadata remains unverified. “Active” means listed as current in the catalog, not a live activity check.' : 'Metadata was checked against the linked source.'}</p>
+            {harness.licenseCheckedAt && <p className="mt-2">The source classification and license were checked against the linked license file. This does not verify other imported fields.</p>}
             <Link to="/methodology" className="mt-4 inline-block text-foreground underline">Read methodology →</Link>
           </div>
         </aside>

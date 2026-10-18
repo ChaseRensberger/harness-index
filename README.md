@@ -1,7 +1,7 @@
 # Harness Index
 
-A searchable directory of LLM agent harnesses, SDKs, and evaluation tools.
-The catalog includes 170 primary entries and 27 adjacent orchestrators and frameworks.
+A searchable directory of LLM agent harnesses and agent execution infrastructure.
+The catalog includes 184 entries, all visible by default.
 Each harness has a page at `/harnesses/{id}`.
 
 ## Development
@@ -32,7 +32,9 @@ The main files are:
 - `catalog/vite.ts`: Build-time data generation and development reloads.
 - `src/data/harnesses.ts`: Display helpers and shared types.
 - `src/lib/catalog.ts`: Search validation and filter rules.
-- `src/router.tsx`: Routes for the index, harness pages, and methodology.
+- `src/routes/`: File-based TanStack routes for the index, harness pages, and methodology.
+- `src/router.tsx`: Router setup and scroll restoration.
+- `src/routeTree.gen.ts`: Generated route tree and route types; do not edit by hand.
 - `src/components/catalog.tsx`: Search, filters, table, and JSON export.
 - `src/components/harness-detail.tsx`: Harness pages and project links.
 - `src/components/ui/`: Shared component styles and Base UI wrappers.
@@ -47,8 +49,63 @@ Unknown fields remain unknown, and the export represents them as `null`.
 
 Search, filters, and sort order use URL parameters so that you can share a view.
 Harness pages retain these parameters for the return link.
-Adjacent entries remain hidden until you include them or select an adjacent category.
+Categories describe the kind of infrastructure; none are hidden by default.
+The table uses the grid/flex layout and shared primitives from the
+[official TanStack/shadcn Base UI example](https://github.com/TanStack/table/tree/main/examples/react/kitchen-sink-shadcn-base).
+TanStack manages column sizing; CSS distributes spare width proportionally. Narrower screens scroll horizontally.
+Drag a column heading’s right edge to resize it, or focus the resize handle and use the arrow keys.
+Double-click a handle to reset that column; “Reset column widths” restores all defaults.
+Widths last for the mounted table view and do not change shared URLs or catalog data.
+On short screens, the page scrolls and the table frame is limited to 70% of the viewport height,
+keeping its sticky header and horizontal scrollbar accessible. Taller screens fit the table to the remaining viewport.
 The app follows the system color preference without a theme switcher or saved override.
+
+Routes follow the directory structure under `src/routes/`:
+`__root.tsx` provides the shared layout, `index.tsx` serves `/`,
+`methodology/route.tsx` serves `/methodology`, and `harnesses/$harnessId/route.tsx` serves harness pages.
+The TanStack Vite plugin regenerates the route tree as route files change and splits route components into lazy-loaded chunks.
+Keep `src/routeTree.gen.ts` in version control. Run `bun run routes:generate` to refresh it without starting Vite.
+The build generates routes before TypeScript checks, so it also works when the generated file is missing or stale.
+
+## Inclusion rule
+
+Include projects that implement the model/tool loop or add substantial agent execution infrastructure:
+tool execution, permissions, persistent agent state, scheduling and recovery, sandboxing, or coordinated agent workflows.
+SDKs, frameworks, and orchestrators must meet the same rule.
+Building on another harness is allowed: OpenClaw qualifies through its gateway, state, tools, and execution controls.
+
+Exclude terminal multiplexers, session launchers, review interfaces, and standalone model proxies.
+Worktrees, terminal persistence, and agent branding alone do not qualify.
+Evaluation projects must supply an agent scaffold or agent execution runtime, not just tasks, patch scoring, or prompt optimization.
+Source classification must be established as open source, source-available, or closed.
+Audit unclear licensing against the project’s license or official terms; omit entries that still cannot be categorized.
+`Unknown` is not an allowed source value. Missing optional metadata does not imply a source classification.
+
+### October 17 scope review
+
+Reviewed all imported descriptions and checked project documentation for borderline entries.
+This is an inclusion review, not a verification of every imported star count, license, or availability claim.
+Retained entries with updated descriptions link to the checked documentation in their TOML records.
+
+Removed from the catalog:
+
+- herdr, cmux, Claude Squad, Orca, and Vibe Kanban: terminal/session or workspace management around external agents.
+- Claude Code Router and Headroom: standalone model-routing or context middleware, rather than agent execution runtimes.
+- Agentless: a fixed localization, repair, and validation pipeline rather than an agent runtime.
+- Hermes Agent Self-Evolution: an optimizer for another agent’s prompts, skills, and code.
+- Terminal-Bench: the current task dataset uses Harbor for execution.
+- SWE-bench harness: benchmark inference and patch scoring; its agent implementation is represented by mini-SWE-agent.
+- Claw Code: the imported record describes a non-working museum exhibit.
+
+Retained infrastructure includes Gas Town (persistent coordination and recovery), NemoClaw (sandbox and policy lifecycle),
+Omnigent (shared sessions and execution policies), Multica (scheduled execution and retries), and GitHub Agentic Workflows
+(sandboxed agent jobs and scoped writes). AionUi has an embedded agent engine; Devin CLI runs a local coding agent.
+The legacy Terminal-Bench 1 repository includes an execution harness and Terminus agent, unlike the current task-only repository.
+
+All eight formerly unknown sources were checked against their license files on October 17:
+Gas Town, GitHub Agentic Workflows, and Claude Flow use MIT; AionUi, NemoClaw, and Omnigent use Apache-2.0.
+Dify and Multica use Apache-based licenses with additional use restrictions, so they are source-available, not open source.
+Each record includes a license link and check date. None remained uncategorizable, so this license audit removed no entries.
 
 ## Editing the catalog
 
@@ -68,7 +125,7 @@ This example shows the required fields:
 name = "Example Harness"
 categories = ["Coding"]
 interfaces = ["CLI"]
-source = "Unknown"
+source = "Open source"
 language = "Unknown"
 status = "Uncertain"
 description = "Description of the harness."
@@ -85,6 +142,9 @@ Update that field when you change an entry.
 If `provenance` is `website`, include `source_url` and `source_checked_at`.
 The source URL can differ from the project URL, such as a documentation page instead of a repository.
 `source_checked_at` records when you checked that source, independently of the data edit date.
+For a license audit, add `license`, `license_url`, and `license_checked_at` together.
+These fields record the licensing evidence separately from the description’s source and appear on the harness page.
+Auditing the license does not verify imported stars, status, or other metadata.
 
 ```toml
 provenance = "website"

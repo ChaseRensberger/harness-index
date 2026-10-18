@@ -2,7 +2,7 @@ import { type Source, type Status } from '../data/harnesses'
 import { Badge } from './ui/badge'
 
 export function SourceBadge({ source }: { source: Source }) {
-  return <Badge className={source === 'Open source' ? 'source-open' : source === 'Unknown' ? 'border-dashed text-muted-foreground' : 'bg-muted/40'}>{source}</Badge>
+  return <Badge className={source === 'Open source' ? 'source-open' : 'bg-muted/40'}>{source}</Badge>
 }
 
 export function StatusLabel({ status }: { status: Status }) {

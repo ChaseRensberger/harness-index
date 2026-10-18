@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "bun run routes:generate && tsc -b && vite build",
+    "routes:generate": "tsr generate",
     "lint": "oxlint",
     "validate": "bun scripts/validate.ts",
     "test": "bun test",
@@ -27,6 +28,8 @@
     "@babel/core": "^7.29.7",
     "@rolldown/plugin-babel": "^0.2.3",
     "@tailwindcss/vite": "^4.3.3",
+    "@tanstack/router-cli": "^1.167.45",
+    "@tanstack/router-plugin": "^1.168.47",
     "@types/babel__core": "^7.20.5",
     "@types/node": "^24.13.3",
     "@types/react": "^19.2.18",

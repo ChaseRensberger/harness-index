@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'bun:test'
-import { categories, interfaces, sources, statuses, formatDate, formatStars, isAdjacent } from '../src/data/harnesses'
+import { categories, interfaces, sources, statuses, formatDate, formatStars } from '../src/data/harnesses'
 import { generate } from '../catalog/generate.ts'
 import { filterHarnesses, validateSearch } from '../src/lib/catalog'
 import { createColumnHelper, createSortedRowModel, constructTable, rowSortingFeature, sortFn_basic, tableFeatures } from '@tanstack/table-core'
@@ -38,6 +38,27 @@ describe('catalog integrity', () => {
     expect(formatStars(wingman)).toBe('—')
   })
 
+  test('formerly unknown sources have explicit classifications and license evidence', () => {
+    const audited = [
+      ['gastown', 'Open source', 'MIT'],
+      ['github-agentic-workflows', 'Open source', 'MIT'],
+      ['claude-flow', 'Open source', 'MIT'],
+      ['aionui', 'Open source', 'Apache-2.0'],
+      ['nemoclaw', 'Open source', 'Apache-2.0'],
+      ['omnigent', 'Open source', 'Apache-2.0'],
+      ['dify', 'Source-available', 'Dify License (Apache-2.0 with additional conditions)'],
+      ['multica', 'Source-available', 'Multica License (Apache-2.0 with additional conditions)'],
+    ]
+    expect(sources).not.toContain('Unknown')
+    for (const [id, source, license] of audited) {
+      const harness = harnesses.find((entry) => entry.id === id)!
+      expect(harness).toMatchObject({ source, license, licenseCheckedAt: '2026-10-17' })
+      expect(harness.licenseUrl).toMatch(/^https:\/\/github\.com\/.+\/LICENSE$/)
+      expect(harness).not.toHaveProperty('license_url')
+      expect(harness).not.toHaveProperty('license_checked_at')
+    }
+  })
+
   test('shared CLI and SDK products are merged', () => {
     const pi = harnesses.filter((harness) => harness.name === 'Pi')
     expect(pi).toHaveLength(1)
@@ -57,10 +78,30 @@ describe('catalog integrity', () => {
 })
 
 describe('URL filters', () => {
-  test('adjacent projects are excluded by default', () => {
-    const core = filterHarnesses(harnesses, {})
-    expect(core.every((harness) => !isAdjacent(harness))).toBe(true)
-    expect(filterHarnesses(harnesses, { adjacent: true })).toHaveLength(harnesses.length)
+  test('all qualifying infrastructure is visible by default', () => {
+    const visible = filterHarnesses(harnesses, {})
+    expect(visible).toHaveLength(harnesses.length)
+    for (const id of ['openclaw', 'gastown', 'nemoclaw', 'langgraph', 'aionui', 'harbor']) {
+      expect(visible.some((harness) => harness.id === id)).toBe(true)
+    }
+    for (const category of ['Orchestrator', 'Framework'] as const) {
+      expect(filterHarnesses(harnesses, { category })).toEqual(harnesses.filter((harness) => harness.categories.includes(category)))
+    }
+  })
+
+  test('terminal managers and benchmark-only entries are outside the catalog', () => {
+    for (const id of ['herdr', 'cmux', 'claude-squad', 'orca', 'vibe-kanban', 'terminal-bench', 'agentless']) {
+      expect(harnesses.some((harness) => harness.id === id)).toBe(false)
+    }
+  })
+
+  test('legacy adjacent URLs use the same catalog and preserve other filters', () => {
+    for (const adjacent of [true, false]) {
+      const search = validateSearch({ adjacent, category: 'Framework', sort: 'name', desc: false })
+      expect(search).not.toHaveProperty('adjacent')
+      expect(search).toMatchObject({ category: 'Framework', sort: 'name', desc: false })
+      expect(filterHarnesses(harnesses, search)).toEqual(filterHarnesses(harnesses, { category: 'Framework' }))
+    }
   })
 
   test('search is case-insensitive, whitespace tolerant, and multi-term', () => {
@@ -75,9 +116,10 @@ describe('URL filters', () => {
   })
 
   test('malformed URL values fall back safely', () => {
-    expect(validateSearch({ q: ['oops'], source: '<script>', category: 'wrong', adjacent: 'true', sort: 'invalid', desc: 'false' })).toEqual({ q: undefined, category: undefined, interface: undefined, source: undefined, status: undefined, adjacent: undefined, sort: undefined, desc: undefined })
+    expect(validateSearch({ source: 'Unknown' }).source).toBeUndefined()
+    expect(validateSearch({ q: ['oops'], source: '<script>', category: 'wrong', adjacent: 'true', sort: 'invalid', desc: 'false' })).toEqual({ q: undefined, category: undefined, interface: undefined, source: undefined, status: undefined, sort: undefined, desc: undefined })
     expect(validateSearch({ q: 'a'.repeat(1000) }).q).toHaveLength(200)
-    expect(validateSearch({ desc: false, adjacent: true })).toMatchObject({ desc: false, adjacent: true })
+    expect(validateSearch({ desc: false })).toMatchObject({ desc: false })
   })
 })
 
