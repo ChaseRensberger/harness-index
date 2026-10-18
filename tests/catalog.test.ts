@@ -26,16 +26,16 @@ describe('catalog integrity', () => {
     }
   })
 
-  test('Wingman is a preview with unknown stars, not invented zeroes', () => {
+  test('Wingman retains preview status and audited repository metadata', () => {
     const wingman = harnesses.find((harness) => harness.id === 'wingman')!
     expect(wingman.url).toBe('https://wingman.actor')
     expect(wingman.status).toBe('Preview')
     expect(wingman.language).toBe('Go')
     expect(wingman.provenance).toBe('website')
-    expect(wingman.sourceUrl).toBe('https://wingman.actor')
-    expect(wingman.sourceCheckedAt).toBe('2026-10-17')
-    expect(wingman.stars).toBeUndefined()
-    expect(formatStars(wingman)).toBe('—')
+    expect(wingman.sourceUrl).toBe('https://docs.wingman.actor/')
+    expect(wingman.sourceCheckedAt).toBe('2026-10-18')
+    expect(wingman.license).toBe('MIT')
+    expect(wingman.stars).toBeGreaterThan(0)
   })
 
   test('formerly unknown sources have explicit classifications and license evidence', () => {
@@ -52,7 +52,7 @@ describe('catalog integrity', () => {
     expect(sources).not.toContain('Unknown')
     for (const [id, source, license] of audited) {
       const harness = harnesses.find((entry) => entry.id === id)!
-      expect(harness).toMatchObject({ source, license, licenseCheckedAt: '2026-10-17' })
+      expect(harness).toMatchObject({ source, license, licenseCheckedAt: '2026-10-18' })
       expect(harness.licenseUrl).toMatch(/^https:\/\/github\.com\/.+\/LICENSE$/)
       expect(harness).not.toHaveProperty('license_url')
       expect(harness).not.toHaveProperty('license_checked_at')

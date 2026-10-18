@@ -1,0 +1,16 @@
+name = "Perplexity Comet"
+url = "https://www.perplexity.ai/comet"
+categories = [ "General" ]
+interfaces = [ "Desktop" ]
+source = "Closed"
+language = "Unknown"
+status = "Active"
+description = "Comet is a browser with an assistant that uses page context and acts on websites. It can navigate pages and complete tasks across browser tabs."
+license = "Proprietary"
+license_url = "https://www.perplexity.ai/hub/legal/comet-terms-of-service"
+license_checked_at = "2026-10-18"
+provenance = "website"
+source_url = "https://comet-help.perplexity.ai/en/articles/11732243-advice-and-use-cases"
+source_checked_at = "2026-10-18"
+snapshot = "2026-10-18"
+last_updated = "2026-10-18"

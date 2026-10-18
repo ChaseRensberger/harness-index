@@ -1,7 +1,7 @@
 # Harness Index
 
 A searchable directory of LLM agent harnesses and agent execution infrastructure.
-The catalog includes 184 entries, all visible by default.
+The catalog includes 178 entries, all visible by default.
 Each harness has a page at `/harnesses/{id}`.
 
 ## Development
@@ -42,10 +42,12 @@ The main files are:
 
 ## Data and behavior
 
-Most entries come from the supplied October 2026 research catalog, not independent research.
-Wingman metadata comes from its official website.
-Stars represent approximate snapshots, not live counts or adoption figures.
+The catalog started from the supplied October 2026 research catalog.
+The October 18 audit reviewed all 184 original entries against project repositories, documentation, and terms.
+It corrected descriptions and metadata, removed seven entries, and split Perplexity Computer and Comet into separate records.
+Stars represent repository snapshots, not live counts or adoption figures. Support-only repository counts are omitted for closed products.
 Unknown fields remain unknown, and the export represents them as `null`.
+See [the audit decisions](data/audits/2026-10-18.md) for remaining uncertainties and evidence limits.
 
 Search, filters, and sort order use URL parameters so that you can share a view.
 Harness pages retain these parameters for the return link.
@@ -107,6 +109,17 @@ Gas Town, GitHub Agentic Workflows, and Claude Flow use MIT; AionUi, NemoClaw, a
 Dify and Multica use Apache-based licenses with additional use restrictions, so they are source-available, not open source.
 Each record includes a license link and check date. None remained uncategorizable, so this license audit removed no entries.
 
+### October 18 metadata review
+
+Six parallel audits covered every description and each entry's identity, links, categories, interfaces, source, license, language, stars, and status.
+Descriptions now state concrete functions rather than promotional claims, benchmark rankings, or catalog commentary.
+The review refreshed repository counts, followed moved projects, corrected licenses and status, and removed unsupported closed-product counts.
+Missing implementation languages remain `Unknown`.
+
+The [audit decisions](data/audits/2026-10-18.md) explain removals, the Perplexity split, and retained uncertainties.
+The [research records](data/audits/2026-10-18.json) preserve sources and findings for all 184 original entries, including removed entries.
+These records describe the research before final inclusion decisions, not a guarantee that every field is independently verified.
+
 ## Editing the catalog
 
 Edit the TOML files in `data/harnesses/`.
@@ -144,6 +157,7 @@ The source URL can differ from the project URL, such as a documentation page ins
 `source_checked_at` records when you checked that source, independently of the data edit date.
 For a license audit, add `license`, `license_url`, and `license_checked_at` together.
 These fields record the licensing evidence separately from the description’s source and appear on the harness page.
+Evidence can be a license file, official terms, or an explicit project license declaration. Record missing files and conflicting declarations in the audit notes.
 Auditing the license does not verify imported stars, status, or other metadata.
 
 ```toml

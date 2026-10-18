@@ -242,7 +242,7 @@ export function Catalog() {
       title: "Harness Index",
       snapshot: lastUpdated,
       notice:
-        "Imported research; not independently verified. Stars are approximate snapshots, not live counts. Null means unknown.",
+        "Static metadata snapshot. Sources and check dates are recorded per entry. Stars are repository counts, not live counts or product usage. Null means unknown.",
       filters: search,
       entries: rows.map(({ original }) => ({
         ...original,
@@ -371,7 +371,7 @@ export function Catalog() {
                 aria-label="Agent harness comparison"
               >
                 <caption className="sr-only">
-                  Agent harnesses from the October 2026 research snapshot. Select column headings to
+                  Agent harness comparison. Select column headings to
                   sort; select a harness to see details and caveats.
                 </caption>
                 <TableHeader>

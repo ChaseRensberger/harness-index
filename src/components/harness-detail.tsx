@@ -77,8 +77,8 @@ export function HarnessDetail() {
           </dl>
           <div className="rounded-md border bg-muted/40 p-5 text-xs leading-6 text-muted-foreground">
             <p className="mb-2 font-medium text-foreground">Verification</p>
-            <p>{harness.provenance === 'catalog' ? 'Other imported metadata remains unverified. “Active” means listed as current in the catalog, not a live activity check.' : 'Metadata was checked against the linked source.'}</p>
-            {harness.licenseCheckedAt && <p className="mt-2">The source classification and license were checked against the linked license file. This does not verify other imported fields.</p>}
+            <p>{harness.provenance === 'catalog' ? 'This entry includes imported metadata that remains unverified. The source links and check dates identify reviewed material.' : 'This entry was reviewed using project sources. Missing fields remain unknown, and star counts are snapshots rather than live values.'}</p>
+            {harness.licenseCheckedAt && <p className="mt-2">The license and source classification were reviewed separately using the linked license evidence. Some projects provide declarations rather than complete license files.</p>}
             <Link to="/methodology" className="mt-4 inline-block text-foreground underline">Read methodology →</Link>
           </div>
         </aside>
