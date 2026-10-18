@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "just-every/code"
 stars = 4037
 status = "Active"
 description = "Every Code extends Codex with browser control, multi-agent commands, and automated task execution. It coordinates coding agents and runs background reviews in separate worktrees."

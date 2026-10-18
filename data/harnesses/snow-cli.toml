@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "IDE", "API" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "MayDay-wpf/snow-cli"
 stars = 1068
 status = "Active"
 description = "Snow CLI runs coding agents with multiple model providers, command approvals, and persistent sessions. It supports background tasks, parallel agents, editor extensions, and an HTTP service."

@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "IDE" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "kodu-ai/claude-coder"
 stars = 5205
 status = "Dormant"
 description = "Kodu, also called Claude Coder, is a VS Code extension that builds and changes applications from chat requests. It also searches the web and helps deploy projects."

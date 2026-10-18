@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "Web" ]
 source = "Open source"
 language = "Python"
+stars_repository = "ai-christianson/RA.Aid"
 stars = 2223
 status = "Preview"
 description = "RA.Aid researches codebases, plans changes, and edits files through a LangGraph agent workflow. It runs shell commands and can use Aider for code editing."

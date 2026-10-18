@@ -4,6 +4,7 @@ categories = [ "Evaluation" ]
 interfaces = [ "Library" ]
 source = "Open source"
 language = "Python"
+stars_repository = "METR/inspect-agents"
 stars = 10
 status = "Active"
 description = "METR Agents extends Inspect agents with task-specific tools, command-user selection, and answer parsing. It also provides context compaction and optional approval checks before tool execution."

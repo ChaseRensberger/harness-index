@@ -4,6 +4,7 @@ categories = [ "General", "Framework" ]
 interfaces = [ "CLI", "Web", "Library" ]
 source = "Open source"
 language = "Python"
+stars_repository = "camel-ai/owl"
 stars = 20151
 status = "Active"
 description = "OWL coordinates agents built on CAMEL to research and complete tasks. Its tools search the web, operate browsers, process documents and media, and execute Python code."

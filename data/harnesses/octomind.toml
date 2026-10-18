@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "API", "IDE" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "Muvon/octomind"
 stars = 166
 status = "Active"
 description = "Octomind reads and edits repositories, runs shell commands, and delegates tasks through configurable agents. Its session engine supports interactive use, scripts, background services, and editor integrations."

@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Go"
+stars_repository = "genai-io/san"
 stars = 79
 status = "Active"
 description = "San runs terminal agents with configurable models, tools, prompts, and permissions. It supports parallel subagents, persistent sessions, reusable skills, and a web inspector for replaying runs."

@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "Blushyes/coro-code"
 stars = 369
 status = "Dormant"
 description = "Coro Code runs coding tasks through a terminal interface with shell and file tools. It supports OpenAI-compatible endpoints and saves conversation state for later restoration."

@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "IDE" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "RooCodeInc/Roo-Code"
 stars = 24272
 status = "Archived"
 description = "Roo Code edits files, runs tools, and handles coding tasks through configurable agent modes in VS Code and a terminal client. The repository is archived."

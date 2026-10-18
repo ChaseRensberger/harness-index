@@ -4,6 +4,7 @@ categories = [ "Coding", "Orchestrator" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "moazbuilds/CodeMachine-CLI"
 stars = 2514
 status = "Active"
 description = "CodeMachine runs coding CLIs through reusable workflows with context passing, parallel execution, and agent coordination. It persists workflow progress for long-running tasks."

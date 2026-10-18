@@ -4,6 +4,7 @@ categories = [ "Coding", "General" ]
 interfaces = [ "Web" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "semanser/codel"
 stars = 2473
 status = "Dormant"
 description = "Codel runs an autonomous agent in Docker with terminal, browser, and file-editing tools. Its self-hosted web interface stores command history and outputs in PostgreSQL."

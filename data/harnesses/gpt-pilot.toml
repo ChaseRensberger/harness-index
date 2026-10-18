@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "IDE" ]
 source = "Source-available"
 language = "Python"
+stars_repository = "Pythagora-io/gpt-pilot"
 stars = 33653
 status = "Dormant"
 description = "Builds applications through agents that clarify requirements, plan tasks, write code, review changes, and debug failures with developer input. The repository is no longer maintained."

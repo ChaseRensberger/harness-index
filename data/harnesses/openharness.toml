@@ -4,6 +4,7 @@ categories = [ "Coding", "SDK" ]
 interfaces = [ "CLI", "Library" ]
 source = "Open source"
 language = "TypeScript / Python"
+stars_repository = "zhijiewong/openharness"
 stars = 100
 status = "Active"
 description = "OpenHarness runs a terminal coding agent with local or hosted models, file and shell tools, subagents, and permission controls. Python and TypeScript SDKs provide programmatic sessions and streaming events."

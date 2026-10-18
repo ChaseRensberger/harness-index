@@ -4,6 +4,10 @@ import { categories, interfaces, sources, statuses } from '../src/data/taxonomy.
 const nonEmpty = z.string().trim().min(1)
 const unique = (values: string[]) => new Set(values).size === values.length
 
+export const StarsRepository = z.string()
+  .regex(/^[A-Za-z0-9-]+\/[A-Za-z0-9_.-]+$/, 'Use a GitHub owner/repository name')
+  .refine((value) => !['.', '..'].includes(value.split('/')[1]), 'Use a GitHub owner/repository name')
+
 // IDs come from filenames, never from a field inside a TOML file.
 export const HarnessFile = z.strictObject({
   name: nonEmpty,
@@ -14,6 +18,7 @@ export const HarnessFile = z.strictObject({
   language: nonEmpty,
   stars: z.number().int().nonnegative().optional(),
   stars_label: nonEmpty.optional(),
+  stars_repository: StarsRepository.optional(),
   status: z.enum(statuses),
   description: nonEmpty,
   license: nonEmpty.optional(),
@@ -34,9 +39,10 @@ export const Harness = HarnessFile.extend({
 }).refine((entry) => entry.license_url === undefined || entry.license !== undefined, {
   path: ['license_url'],
   message: 'A license URL requires a license',
-}).transform(({ stars_label, last_updated, source_url, license_url, ...entry }) => ({
+}).transform(({ stars_label, stars_repository, last_updated, source_url, license_url, ...entry }) => ({
   ...entry,
   starsLabel: stars_label,
+  starsRepository: stars_repository,
   lastUpdated: last_updated,
   sourceUrl: source_url,
   licenseUrl: license_url,

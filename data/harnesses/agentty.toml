@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "IDE" ]
 source = "Open source"
 language = "C++"
+stars_repository = "agentty-org/agentty"
 stars = 620
 status = "Active"
 description = "Terminal coding agent distributed as a native C++ binary. It provides sandboxed shell commands, code retrieval, persistent memory, multiple model providers, and editor integration."

@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "aws/amazon-q-developer-cli"
 stars = 1983
 status = "Maintenance"
 description = "AWS terminal agent for software development through natural-language requests. The open-source project receives only critical security fixes, and AWS directs users to Kiro CLI."

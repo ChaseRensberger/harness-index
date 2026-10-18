@@ -30,7 +30,7 @@ export default function App() {
             GitHub
           </a>
           <a href={addHarnessUrl} className="nav-link">
-            Add your harness
+            Add a harness
           </a>
         </nav>
       </header>

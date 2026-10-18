@@ -4,6 +4,7 @@ categories = [ "Coding", "General", "SDK" ]
 interfaces = [ "CLI", "Web", "API", "Library" ]
 source = "Source-available"
 language = "TypeScript"
+stars_repository = "truffle-ai/dexto"
 stars = 652
 status = "Preview"
 description = "Dexto runs agents defined in YAML with persistent sessions, tool permissions, memory, and subagents. Its bundled coding agent edits files and runs tests."

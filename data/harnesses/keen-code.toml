@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Go"
+stars_repository = "mochow13/keen-code"
 stars = 73
 status = "Active"
 description = "A terminal coding agent with file editing, shell commands, external tools, and delegated workers. It summarizes earlier tool activity by default, with optional retention of full outputs during a session."

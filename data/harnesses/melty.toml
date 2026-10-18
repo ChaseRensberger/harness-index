@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "IDE", "Desktop" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "meltylabs/melty"
 stars = 5462
 status = "Dormant"
 description = "Melty is a code editor that makes changes across files from chat requests. It records chat steps as Git commits that users can revert, branch, or squash."

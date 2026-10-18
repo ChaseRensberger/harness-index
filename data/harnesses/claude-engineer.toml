@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "Web" ]
 source = "Open source"
 language = "Python"
+stars_repository = "Doriandarko/claude-engineer"
 stars = 11215
 status = "Dormant"
 description = "Community assistant that uses Claude to create, load, and execute Python tools during conversations. Its terminal and web interfaces share conversation history and token management."

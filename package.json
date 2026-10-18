@@ -9,6 +9,7 @@
     "routes:generate": "tsr generate",
     "lint": "oxlint",
     "validate": "bun scripts/validate.ts",
+    "refresh:stars": "bun scripts/refresh-stars.ts",
     "test": "bun test",
     "preview": "vite preview"
   },

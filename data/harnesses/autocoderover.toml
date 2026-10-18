@@ -4,6 +4,7 @@ categories = [ "Coding", "Evaluation" ]
 interfaces = [ "CLI" ]
 source = "Source-available"
 language = "Python"
+stars_repository = "AutoCodeRoverSG/auto-code-rover"
 stars = 3100
 status = "Dormant"
 description = "Program-repair agent that searches classes and methods, gathers code context, and generates patches for reported issues. It supports local repositories, GitHub issues, and SWE-bench tasks."

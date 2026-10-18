@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "minmaxflow/mini-kode"
 stars = 307
 status = "Dormant"
 description = "Mini-Kode is an educational terminal coding agent with file tools, search, shell commands, and permission approvals. It connects to OpenAI-compatible model APIs and external tools."

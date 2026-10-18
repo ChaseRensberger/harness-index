@@ -4,6 +4,7 @@ categories = [ "Coding", "Evaluation" ]
 interfaces = [ "Library", "CLI", "Web" ]
 source = "Open source"
 language = "Python"
+stars_repository = "aorwall/moatless-tools"
 stars = 642
 status = "Dormant"
 description = "Moatless Tools runs coding agents with configurable actions and model providers. It includes a web interface and Docker-based SWE-bench evaluation scripts that save execution traces."

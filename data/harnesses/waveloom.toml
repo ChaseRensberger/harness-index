@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Go"
+stars_repository = "Menfre01/waveloom"
 stars = 134
 status = "Active"
 description = "Waveloom is a terminal coding agent with file editing, shell tools, permissions, and subagents. Its context management preserves prompt prefixes for DeepSeek caching."

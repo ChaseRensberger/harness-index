@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Python"
+stars_repository = "josephsenior/Grinta-Coding-Agent"
 stars = 31
 status = "Active"
 description = "A local coding agent that plans changes, edits files, runs commands, and tests results. It stores session history and checkpoints, retries failures, and requires validation before marking tasks complete."

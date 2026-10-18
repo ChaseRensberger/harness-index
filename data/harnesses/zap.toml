@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "zap-coding-agent/zap-coding-agent"
 stars = 37
 status = "Active"
 description = "Zap runs coding tasks in a terminal with codebase indexing and reusable skills. It loads project context and external tool definitions as needed during a session."

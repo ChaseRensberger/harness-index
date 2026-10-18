@@ -4,6 +4,7 @@ categories = [ "Coding", "SDK" ]
 interfaces = [ "CLI", "Library" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "jondot/picocode"
 stars = 62
 status = "Dormant"
 description = "picocode edits files, searches code, and runs shell commands through a terminal agent or Rust library. Named recipes support scripted tasks, with confirmation prompts for destructive actions by default."

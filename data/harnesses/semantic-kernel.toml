@@ -4,6 +4,7 @@ categories = [ "Framework" ]
 interfaces = [ "Library" ]
 source = "Open source"
 language = "C# / Python"
+stars_repository = "microsoft/semantic-kernel"
 stars = 28669
 status = "Maintenance"
 description = "Semantic Kernel builds agents that call tools, retain conversation state, and coordinate with other agents. Microsoft maintains it while directing new development toward Microsoft Agent Framework."

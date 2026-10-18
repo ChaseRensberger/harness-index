@@ -4,6 +4,7 @@ categories = [ "General", "SDK" ]
 interfaces = [ "CLI", "Web", "API", "Library" ]
 source = "Open source"
 language = "Go"
+stars_repository = "ChaseRensberger/wingman"
 stars = 24
 status = "Preview"
 description = "Wingman is a Go agent runtime for building custom agent applications. It provides persistent sessions, model routing, tool permissions, and plugins through an HTTP API or an embedded library."

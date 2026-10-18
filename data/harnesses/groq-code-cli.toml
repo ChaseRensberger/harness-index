@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "build-with-groq/groq-code-cli"
 stars = 745
 status = "Dormant"
 description = "A terminal coding agent that connects Groq-hosted models to file operations and other executable tools. Developers can extend its tool registry, slash commands, and terminal interface."

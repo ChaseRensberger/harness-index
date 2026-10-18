@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "Desktop" ]
 source = "Open source"
 language = "Python"
+stars_repository = "entropy-research/Devon"
 stars = 3448
 status = "Dormant"
 description = "Devon explores codebases, edits multiple files, fixes bugs, and writes tests through desktop and terminal interfaces. Its documented functionality outside Python and local-model support are limited."

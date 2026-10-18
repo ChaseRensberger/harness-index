@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "leonardcser/smelt"
 stars = 55
 status = "Preview"
 description = "Smelt is a terminal coding agent with planning and editing modes. Lua plugins customize its tools, commands, keybindings, and permissions."

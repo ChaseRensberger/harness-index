@@ -137,6 +137,42 @@ The browser receives generated data without a TOML parser or Zod.
 During development, adding, editing, or removing a TOML file reloads the page.
 There is no generated data file to commit and no separate generation command to run.
 
+## Refreshing star counts
+
+Run `bun run refresh:stars` to fetch GitHub star counts and update the TOML files without an LLM.
+The command uses `GH_TOKEN`, then `GITHUB_TOKEN`, then your GitHub CLI login for `github.com`.
+If you use the GitHub CLI, sign in first with `gh auth login --hostname github.com`.
+Keep tokens outside the repository. The website does not receive or need these credentials.
+
+```sh
+bun run refresh:stars --dry-run
+bun run refresh:stars
+```
+
+The `--dry-run` flag fetches counts and reports changes without writing files.
+To refresh one entry, run `bun run refresh:stars wingman`.
+Review `git diff` before you commit. The command never stages or commits changes.
+
+Each entry opts in with an explicit `stars_repository` field:
+
+```toml
+stars_repository = "ChaseRensberger/wingman"
+stars = 24
+```
+
+Use `owner/repository`, not a URL or a documentation path.
+The catalog maps all 141 existing star counts to their repositories.
+Entries without this field stay unchanged, even if their project links point to GitHub.
+Do not map installer, support-only, or unrelated repositories to products.
+For products that share a repository, the command fetches one count for all mapped entries.
+
+When a count changes, the command updates `stars` and the entry's `last_updated` edit date in UTC.
+It also removes stale `stars_label` ranges, even when the numeric count stays the same.
+Other fields and unrelated formatting stay unchanged. Repeated runs leave unchanged entries alone.
+Failed requests preserve existing values and make the command exit with a nonzero code.
+Authentication and rate-limit errors stop further requests. Other request failures do not stop the remaining entries.
+The refresh runs only when you invoke it, not during a build or in the browser.
+
 ## Tests and production
 
 Run the tests, lint rules, and production build before deployment:

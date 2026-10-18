@@ -4,6 +4,7 @@ categories = [ "General" ]
 interfaces = [ "CLI", "Web" ]
 source = "Open source"
 language = "Python"
+stars_repository = "Fosowl/agenticSeek"
 stars = 27506
 status = "Active"
 description = "Self-hosted assistant that selects agents to browse websites, write and run code, and plan multi-step tasks. It supports local models and hosted model APIs."

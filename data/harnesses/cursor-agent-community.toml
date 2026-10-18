@@ -4,6 +4,7 @@ categories = [ "Coding", "SDK" ]
 interfaces = [ "Library" ]
 source = "Open source"
 language = "Python"
+stars_repository = "civai-technologies/cursor-agent"
 stars = 136
 status = "Preview"
 description = "Cursor Agent Tools is an independent Python coding agent with file editing, search, and command execution. It supports Anthropic, OpenAI, and local Ollama models."

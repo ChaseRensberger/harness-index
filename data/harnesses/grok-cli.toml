@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "superagent-ai/grok-cli"
 stars = 3495
 status = "Active"
 description = "A community-built terminal coding agent that uses the Grok API for code changes, web searches, and delegated tasks. It supports saved sessions, scheduled runs, and remote control through Telegram."

@@ -4,6 +4,7 @@ categories = [ "Evaluation" ]
 interfaces = [ "Web", "CLI", "API", "Library" ]
 source = "Open source"
 language = "TypeScript / Python"
+stars_repository = "METR/vivaria"
 stars = 144
 status = "Archived"
 description = "Vivaria runs agents inside task environments and records their actions, model calls, and results for evaluation. Its web interface supports trace inspection and annotations."

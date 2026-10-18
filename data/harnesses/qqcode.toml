@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Python"
+stars_repository = "qnguyen3/qqcode"
 stars = 53
 status = "Dormant"
 description = "QQcode is a Python coding assistant derived from Mistral Vibe. It reads and edits files, searches repositories, runs shell commands, and applies configurable tool permissions."

@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "IDE" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "PawanOsman/OpenCursor"
 stars = 6033
 status = "Active"
 description = "OpenCursor runs a coding agent inside VS Code with file editing, code search, terminal commands, and subagents. It supports hosted or local models and configurable tool approvals."

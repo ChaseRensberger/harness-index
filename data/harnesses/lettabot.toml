@@ -4,6 +4,7 @@ categories = [ "General" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "letta-ai/lettabot"
 stars = 326
 status = "Archived"
 description = "LettaBot connects messaging apps to a shared agent with persistent memory, local command execution, and scheduled tasks. Development moved to Letta Code channels and schedules."

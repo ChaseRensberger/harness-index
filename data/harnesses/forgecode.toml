@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "tailcallhq/forgecode"
 stars = 7635
 status = "Active"
 description = "ForgeCode reads files, writes patches, and runs commands in interactive or scripted terminal sessions. It provides separate research, planning, and implementation agents with saved conversations."

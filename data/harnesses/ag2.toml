@@ -4,6 +4,7 @@ categories = [ "Framework" ]
 interfaces = [ "Library" ]
 source = "Open source"
 language = "Python"
+stars_repository = "ag2ai/ag2"
 stars = 5000
 status = "Active"
 description = "Python framework for agents that call tools, exchange messages, and coordinate tasks through networks. It supports human approval, persistent knowledge, and context compaction."

@@ -4,6 +4,7 @@ categories = [ "General" ]
 interfaces = [ "CLI", "Web", "API" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "nearai/ironclaw"
 stars = 12661
 status = "Active"
 description = "A personal agent that runs tools, stores memory, and schedules background tasks across chat and browser interfaces. It isolates untrusted tools with WebAssembly permissions or containers."

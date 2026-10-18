@@ -4,6 +4,7 @@ categories = [ "Evaluation" ]
 interfaces = [ "CLI", "API" ]
 source = "Open source"
 language = "Python"
+stars_repository = "METR/inspect-action"
 stars = 25
 status = "Archived"
 description = "This archived version of Hawk starts Inspect evaluation jobs in Kubernetes and manages their execution. Development continues in the METR/hawk repository."

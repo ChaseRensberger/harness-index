@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "neovateai/neovate-code"
 stars = 1558
 status = "Active"
 description = "Neovate Code generates and changes code, fixes bugs, reviews changes, and adds tests from terminal requests. Users choose a model provider and approve proposed tool calls."

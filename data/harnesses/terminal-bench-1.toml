@@ -4,6 +4,7 @@ categories = [ "Evaluation" ]
 interfaces = [ "CLI", "Library" ]
 source = "Open source"
 language = "Python"
+stars_repository = "harbor-framework/terminal-bench-1"
 stars = 2601
 status = "Maintenance"
 description = "Terminal-Bench 1 connects language models to sandboxed terminals and evaluates their task execution. It includes the Terminus agent, while current benchmark runs use Harbor."

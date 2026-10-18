@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI", "Web", "Desktop", "API" ]
 source = "Open source"
 language = "TypeScript"
+stars_repository = "arthurpanhku/dvalincode"
 stars = 117
 status = "Active"
 description = "DvalinCode combines a coding agent with security scanning, bounded repair loops, and independent test execution. Policies restrict tool access, and audit logs record agent actions."

@@ -4,6 +4,7 @@ categories = [ "Evaluation" ]
 interfaces = [ "Library" ]
 source = "Open source"
 language = "Python"
+stars_repository = "meridianlabs-ai/inspect_swe"
 stars = 38
 status = "Active"
 description = "Runs coding agents inside Inspect AI evaluation sandboxes and routes their model calls through Inspect. Evaluations retain standard token limits, time limits, and execution logs."

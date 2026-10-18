@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "lee101/codex-infinity"
 stars = 101
 status = "Active"
 description = "Codex Infinity extends Codex CLI with automatic task continuation, improvement generation, and goal chaining. It runs locally with hosted providers or local models."

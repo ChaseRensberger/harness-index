@@ -4,6 +4,7 @@ categories = [ "Coding" ]
 interfaces = [ "CLI" ]
 source = "Open source"
 language = "Rust"
+stars_repository = "dhanji/g3"
 stars = 519
 status = "Preview"
 description = "A terminal coding agent that edits files, executes shell commands, and manages tasks across several model providers. It supports reusable skills and automatic conversation compaction."
