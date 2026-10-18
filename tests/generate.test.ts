@@ -1,10 +1,11 @@
 import { describe, expect, test } from 'bun:test'
+import { execFileSync } from 'node:child_process'
 import { mkdtemp, rm, writeFile } from 'node:fs/promises'
 import { tmpdir } from 'node:os'
 import path from 'node:path'
 import { stringify } from 'smol-toml'
 import { build, createServer } from 'vite'
-import { generate, parseHarness } from '../catalog/generate.ts'
+import { generate, mainCommitDate, parseHarness } from '../catalog/generate.ts'
 import { catalogModuleId, harnessCatalog } from '../catalog/vite.ts'
 
 const example = {
@@ -17,7 +18,6 @@ const example = {
   status: 'Preview',
   description: 'A test entry for catalog validation.',
   provenance: 'catalog',
-  snapshot: 'Aug–Oct 2026',
   last_updated: '2026-10-17',
 }
 
@@ -32,7 +32,6 @@ describe('TOML schema', () => {
     expect(harness.id).toBe('stable-id')
     expect(harness.name).toBe('Example Harness')
     expect(harness.lastUpdated).toBe('2026-10-17')
-    expect(harness.snapshot).toBe('Aug–Oct 2026')
     expect(harness.stars).toBeUndefined()
   })
 
@@ -44,32 +43,32 @@ describe('TOML schema', () => {
     expect(harness).not.toHaveProperty('last_updated')
   })
 
-  test('keeps website sources and check dates specific to the entry', () => {
+  test('keeps website sources without requiring fetch dates', () => {
     const harness = parseHarness('another-harness.toml', stringify({
       ...example,
       url: 'https://github.com/example/another-harness',
       provenance: 'website',
       source_url: 'https://example.com/documentation',
-      source_checked_at: '2026-10-09',
     }))
     expect(harness.sourceUrl).toBe('https://example.com/documentation')
-    expect(harness.sourceCheckedAt).toBe('2026-10-09')
     expect(harness.url).toBe('https://github.com/example/another-harness')
     expect(harness.lastUpdated).toBe('2026-10-17')
     expect(harness).not.toHaveProperty('source_url')
-    expect(harness).not.toHaveProperty('source_checked_at')
   })
 
   test('requires a source URL for website provenance', () => {
     expect(() => parseHarness('missing-source.toml', stringify({
-      ...example, provenance: 'website', source_checked_at: '2026-10-09',
+      ...example, provenance: 'website',
     }))).toThrow('source_url')
   })
 
-  test('requires a source check date for website provenance', () => {
-    expect(() => parseHarness('missing-check-date.toml', stringify({
-      ...example, provenance: 'website', source_url: 'https://example.com',
-    }))).toThrow('source_checked_at')
+  test('keeps license links without requiring check dates', () => {
+    const harness = parseHarness('license.toml', stringify({
+      ...example, license: 'MIT', license_url: 'https://example.com/LICENSE',
+    }))
+    expect(harness.license).toBe('MIT')
+    expect(harness.licenseUrl).toBe('https://example.com/LICENSE')
+    expect(harness).not.toHaveProperty('license_url')
   })
 
   const invalid = [
@@ -80,17 +79,16 @@ describe('TOML schema', () => {
     { name: 'unknown statuses', patch: { status: 'Maybe' }, field: 'status' },
     { name: 'unknown sources', patch: { source: 'Public repo' }, field: 'source' },
     { name: 'unresolved source classifications', patch: { source: 'Unknown' }, field: 'source' },
-    { name: 'unsafe license links', patch: { license: 'MIT', license_url: 'javascript:alert(1)', license_checked_at: '2026-10-17' }, field: 'license_url' },
-    { name: 'invalid license check dates', patch: { license: 'MIT', license_url: 'https://example.com/LICENSE', license_checked_at: '2026-02-30' }, field: 'license_checked_at' },
-    { name: 'license checks without a license', patch: { license_url: 'https://example.com/LICENSE', license_checked_at: '2026-10-17' }, field: 'license_url' },
-    { name: 'license checks without a date', patch: { license: 'MIT', license_url: 'https://example.com/LICENSE' }, field: 'license_url' },
-    { name: 'license checks without a URL', patch: { license: 'MIT', license_checked_at: '2026-10-17' }, field: 'license_url' },
+    { name: 'unsafe license links', patch: { license: 'MIT', license_url: 'javascript:alert(1)' }, field: 'license_url' },
+    { name: 'license links without a license', patch: { license_url: 'https://example.com/LICENSE' }, field: 'license_url' },
     { name: 'negative stars', patch: { stars: -1 }, field: 'stars' },
     { name: 'fractional stars', patch: { stars: 1.5 }, field: 'stars' },
     { name: 'star labels without a numeric count', patch: { stars_label: '1–2k' }, field: 'stars_label' },
     { name: 'unsafe links', patch: { url: 'javascript:alert(1)' }, field: 'url' },
     { name: 'unsafe source links', patch: { source_url: 'javascript:alert(1)' }, field: 'source_url' },
-    { name: 'invalid source dates', patch: { source_checked_at: '2026-02-30' }, field: 'source_checked_at' },
+    { name: 'source fetch dates', patch: { source_checked_at: '2026-10-18' }, field: 'source_checked_at' },
+    { name: 'license check dates', patch: { license_checked_at: '2026-10-18' }, field: 'license_checked_at' },
+    { name: 'snapshot dates', patch: { snapshot: '2026-10-18' }, field: 'snapshot' },
     { name: 'empty names', patch: { name: ' ' }, field: 'name' },
     { name: 'empty categories', patch: { categories: [] }, field: 'categories' },
     { name: 'duplicate categories', patch: { categories: ['Coding', 'Coding'] }, field: 'categories' },
@@ -121,22 +119,76 @@ describe('TOML schema', () => {
   })
 })
 
+describe('main commit date', () => {
+  function git(directory: string, args: string[], date?: string) {
+    return execFileSync('git', args, {
+      cwd: directory,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'ignore'],
+      env: {
+        ...process.env,
+        GIT_AUTHOR_NAME: 'Test',
+        GIT_AUTHOR_EMAIL: 'test@example.com',
+        GIT_COMMITTER_NAME: 'Test',
+        GIT_COMMITTER_EMAIL: 'test@example.com',
+        ...(date ? { GIT_AUTHOR_DATE: date, GIT_COMMITTER_DATE: date } : {}),
+      },
+    }).trim()
+  }
+
+  test('uses main rather than a newer feature-branch commit and normalizes to UTC', async () => {
+    await withDirectory(async (directory) => {
+      git(directory, ['init', '--initial-branch=main'])
+      git(directory, ['commit', '--allow-empty', '-m', 'Main'], '2026-10-18T23:30:00-07:00')
+      git(directory, ['switch', '-c', 'feature'])
+      git(directory, ['commit', '--allow-empty', '-m', 'Feature'], '2026-10-20T12:00:00Z')
+      expect(mainCommitDate(directory)).toBe('2026-10-19')
+    })
+  })
+
+  test('uses origin/main when the checkout has no local main', async () => {
+    await withDirectory(async (directory) => {
+      git(directory, ['init', '--initial-branch=feature'])
+      git(directory, ['commit', '--allow-empty', '-m', 'Main'], '2026-10-18T12:00:00Z')
+      git(directory, ['update-ref', 'refs/remotes/origin/main', 'HEAD'])
+      git(directory, ['commit', '--allow-empty', '-m', 'Feature'], '2026-10-20T12:00:00Z')
+      expect(mainCommitDate(directory)).toBe('2026-10-18')
+    })
+  })
+
+  test('uses the checked-out commit for a detached deployment without main refs', async () => {
+    await withDirectory(async (directory) => {
+      git(directory, ['init', '--initial-branch=deployment'])
+      git(directory, ['commit', '--allow-empty', '-m', 'Deploy'], '2026-10-18T12:00:00Z')
+      git(directory, ['switch', '--detach'])
+      git(directory, ['branch', '-D', 'deployment'])
+      expect(mainCommitDate(directory)).toBe('2026-10-18')
+    })
+  })
+
+  test('returns no date for source archives without Git history', async () => {
+    await withDirectory(async (directory) => {
+      expect(mainCommitDate(directory)).toBeNull()
+    })
+  })
+})
+
 describe('catalog generation', () => {
-  test('loads all migrated entries and computes the update date', async () => {
+  test('loads all migrated entries and uses the main commit date', async () => {
     const catalog = await generate()
     expect(catalog.harnesses.length).toBeGreaterThan(170)
     expect(catalog.files).toHaveLength(catalog.harnesses.length)
-    expect(catalog.lastUpdated).toBe(catalog.harnesses.map((harness) => harness.lastUpdated).sort().at(-1)!)
+    expect(catalog.lastUpdated).toBe(mainCommitDate(path.resolve('data/harnesses')))
   })
 
-  test('uses deterministic filename order and the latest record update', async () => {
+  test('uses deterministic filename order without inventing a date outside Git', async () => {
     await withDirectory(async (directory) => {
       await writeFile(path.join(directory, 'zebra.toml'), stringify({ ...example, name: 'Zebra', last_updated: '2026-10-18' }))
       await writeFile(path.join(directory, 'alpha.toml'), stringify({ ...example, name: 'Alpha' }))
       await writeFile(path.join(directory, 'README.md'), 'Not a data file.')
       const catalog = await generate(directory)
       expect(catalog.harnesses.map((harness) => harness.id)).toEqual(['alpha', 'zebra'])
-      expect(catalog.lastUpdated).toBe('2026-10-18')
+      expect(catalog.lastUpdated).toBeNull()
     })
   })
 

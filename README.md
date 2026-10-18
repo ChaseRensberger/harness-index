@@ -32,22 +32,18 @@ The main files are:
 - `catalog/vite.ts`: Build-time data generation and development reloads.
 - `src/data/harnesses.ts`: Display helpers and shared types.
 - `src/lib/catalog.ts`: Search validation and filter rules.
-- `src/routes/`: File-based TanStack routes for the index, harness pages, and methodology.
+- `src/routes/`: File-based TanStack routes for the index and harness pages.
 - `src/router.tsx`: Router setup and scroll restoration.
 - `src/routeTree.gen.ts`: Generated route tree and route types; do not edit by hand.
-- `src/components/catalog.tsx`: Search, filters, table, and JSON export.
+- `src/components/catalog.tsx`: Search, filters, and table.
 - `src/components/harness-detail.tsx`: Harness pages and project links.
 - `src/components/ui/`: Shared component styles and Base UI wrappers.
 - `src/index.css`: Geist Mono, colors, spacing, borders, and focus styles.
 
 ## Data and behavior
 
-The catalog started from the supplied October 2026 research catalog.
-The October 18 audit reviewed all 184 original entries against project repositories, documentation, and terms.
-It corrected descriptions and metadata, removed seven entries, and split Perplexity Computer and Comet into separate records.
 Stars represent repository snapshots, not live counts or adoption figures. Support-only repository counts are omitted for closed products.
-Unknown fields remain unknown, and the export represents them as `null`.
-See [the audit decisions](data/audits/2026-10-18.md) for remaining uncertainties and evidence limits.
+Unknown fields remain unknown.
 
 Search, filters, and sort order use URL parameters so that you can share a view.
 Harness pages retain these parameters for the return link.
@@ -64,7 +60,7 @@ The app follows the system color preference without a theme switcher or saved ov
 
 Routes follow the directory structure under `src/routes/`:
 `__root.tsx` provides the shared layout, `index.tsx` serves `/`,
-`methodology/route.tsx` serves `/methodology`, and `harnesses/$harnessId/route.tsx` serves harness pages.
+and `harnesses/$harnessId/route.tsx` serves harness pages.
 The TanStack Vite plugin regenerates the route tree as route files change and splits route components into lazy-loaded chunks.
 Keep `src/routeTree.gen.ts` in version control. Run `bun run routes:generate` to refresh it without starting Vite.
 The build generates routes before TypeScript checks, so it also works when the generated file is missing or stale.
@@ -80,45 +76,8 @@ Exclude terminal multiplexers, session launchers, review interfaces, and standal
 Worktrees, terminal persistence, and agent branding alone do not qualify.
 Evaluation projects must supply an agent scaffold or agent execution runtime, not just tasks, patch scoring, or prompt optimization.
 Source classification must be established as open source, source-available, or closed.
-Audit unclear licensing against the project’s license or official terms; omit entries that still cannot be categorized.
+Use the project’s license or official terms to resolve unclear licensing; omit entries that still cannot be categorized.
 `Unknown` is not an allowed source value. Missing optional metadata does not imply a source classification.
-
-### October 17 scope review
-
-Reviewed all imported descriptions and checked project documentation for borderline entries.
-This is an inclusion review, not a verification of every imported star count, license, or availability claim.
-Retained entries with updated descriptions link to the checked documentation in their TOML records.
-
-Removed from the catalog:
-
-- herdr, cmux, Claude Squad, Orca, and Vibe Kanban: terminal/session or workspace management around external agents.
-- Claude Code Router and Headroom: standalone model-routing or context middleware, rather than agent execution runtimes.
-- Agentless: a fixed localization, repair, and validation pipeline rather than an agent runtime.
-- Hermes Agent Self-Evolution: an optimizer for another agent’s prompts, skills, and code.
-- Terminal-Bench: the current task dataset uses Harbor for execution.
-- SWE-bench harness: benchmark inference and patch scoring; its agent implementation is represented by mini-SWE-agent.
-- Claw Code: the imported record describes a non-working museum exhibit.
-
-Retained infrastructure includes Gas Town (persistent coordination and recovery), NemoClaw (sandbox and policy lifecycle),
-Omnigent (shared sessions and execution policies), Multica (scheduled execution and retries), and GitHub Agentic Workflows
-(sandboxed agent jobs and scoped writes). AionUi has an embedded agent engine; Devin CLI runs a local coding agent.
-The legacy Terminal-Bench 1 repository includes an execution harness and Terminus agent, unlike the current task-only repository.
-
-All eight formerly unknown sources were checked against their license files on October 17:
-Gas Town, GitHub Agentic Workflows, and Claude Flow use MIT; AionUi, NemoClaw, and Omnigent use Apache-2.0.
-Dify and Multica use Apache-based licenses with additional use restrictions, so they are source-available, not open source.
-Each record includes a license link and check date. None remained uncategorizable, so this license audit removed no entries.
-
-### October 18 metadata review
-
-Six parallel audits covered every description and each entry's identity, links, categories, interfaces, source, license, language, stars, and status.
-Descriptions now state concrete functions rather than promotional claims, benchmark rankings, or catalog commentary.
-The review refreshed repository counts, followed moved projects, corrected licenses and status, and removed unsupported closed-product counts.
-Missing implementation languages remain `Unknown`.
-
-The [audit decisions](data/audits/2026-10-18.md) explain removals, the Perplexity split, and retained uncertainties.
-The [research records](data/audits/2026-10-18.json) preserve sources and findings for all 184 original entries, including removed entries.
-These records describe the research before final inclusion decisions, not a guarantee that every field is independently verified.
 
 ## Editing the catalog
 
@@ -143,27 +102,24 @@ language = "Unknown"
 status = "Uncertain"
 description = "Description of the harness."
 provenance = "catalog"
-snapshot = "Aug–Oct 2026"
 last_updated = "2026-10-17"
 ```
 
-`snapshot` records the date or period of the source information.
-`last_updated` records the date of the data edit, not an independent review of the project.
-The index displays the latest `last_updated` date across the catalog.
+`last_updated` records the date of the data edit, not when the information was fetched.
 Update that field when you change an entry.
+The index's “Last updated” date comes from the latest commit on local `main` when the app builds or the development server loads the catalog.
+If local `main` is unavailable, it uses `origin/main`, then `HEAD` for detached deployments.
+The date uses UTC and is hidden when no Git history is available. The app does not fetch remote Git history.
 
-If `provenance` is `website`, include `source_url` and `source_checked_at`.
+If `provenance` is `website`, include `source_url`.
 The source URL can differ from the project URL, such as a documentation page instead of a repository.
-`source_checked_at` records when you checked that source, independently of the data edit date.
-For a license audit, add `license`, `license_url`, and `license_checked_at` together.
+For license information, add `license` and an optional `license_url`.
 These fields record the licensing evidence separately from the description’s source and appear on the harness page.
-Evidence can be a license file, official terms, or an explicit project license declaration. Record missing files and conflicting declarations in the audit notes.
-Auditing the license does not verify imported stars, status, or other metadata.
+Evidence can be a license file, official terms, or an explicit project license declaration.
 
 ```toml
 provenance = "website"
 source_url = "https://example.com/documentation"
-source_checked_at = "2026-10-17"
 ```
 
 Run the validator after an edit:
@@ -194,5 +150,5 @@ bun run preview
 ```
 
 The build writes static files to `dist/`.
-Configure your production host to serve `index.html` for application routes, including `/harnesses/*` and `/methodology`.
+Configure your production host to serve `index.html` for application routes, including `/harnesses/*`.
 This fallback lets direct links and page refreshes work.

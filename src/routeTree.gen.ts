@@ -10,17 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as MethodologyRouteRouteImport } from './routes/methodology/route'
 import { Route as HarnessesHarnessIdRouteRouteImport } from './routes/harnesses/$harnessId/route'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MethodologyRouteRoute = MethodologyRouteRouteImport.update({
-  id: '/methodology',
-  path: '/methodology',
   getParentRoute: () => rootRouteImport,
 } as any)
 const HarnessesHarnessIdRouteRoute = HarnessesHarnessIdRouteRouteImport.update({
@@ -31,31 +25,27 @@ const HarnessesHarnessIdRouteRoute = HarnessesHarnessIdRouteRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/methodology': typeof MethodologyRouteRoute
   '/harnesses/$harnessId': typeof HarnessesHarnessIdRouteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/methodology': typeof MethodologyRouteRoute
   '/harnesses/$harnessId': typeof HarnessesHarnessIdRouteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/methodology': typeof MethodologyRouteRoute
   '/harnesses/$harnessId': typeof HarnessesHarnessIdRouteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/methodology' | '/harnesses/$harnessId'
+  fullPaths: '/' | '/harnesses/$harnessId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/methodology' | '/harnesses/$harnessId'
-  id: '__root__' | '/' | '/methodology' | '/harnesses/$harnessId'
+  to: '/' | '/harnesses/$harnessId'
+  id: '__root__' | '/' | '/harnesses/$harnessId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  MethodologyRouteRoute: typeof MethodologyRouteRoute
   HarnessesHarnessIdRouteRoute: typeof HarnessesHarnessIdRouteRoute
 }
 
@@ -66,13 +56,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/methodology': {
-      id: '/methodology'
-      path: '/methodology'
-      fullPath: '/methodology'
-      preLoaderRoute: typeof MethodologyRouteRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/harnesses/$harnessId': {
@@ -87,7 +70,6 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  MethodologyRouteRoute: MethodologyRouteRoute,
   HarnessesHarnessIdRouteRoute: HarnessesHarnessIdRouteRoute,
 }
 export const routeTree = rootRouteImport

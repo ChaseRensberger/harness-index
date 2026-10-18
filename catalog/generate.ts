@@ -1,4 +1,5 @@
 import { readFile, readdir } from 'node:fs/promises'
+import { execFileSync } from 'node:child_process'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { parse } from 'smol-toml'
@@ -6,6 +7,21 @@ import { z } from 'zod'
 import { Harness, HarnessFile } from './schema.ts'
 
 export const catalogDirectory = fileURLToPath(new URL('../data/harnesses/', import.meta.url))
+
+export function mainCommitDate(directory: string): string | null {
+  // Detached deployments can lack branch refs. Source archives can lack Git entirely.
+  for (const ref of ['refs/heads/main', 'refs/remotes/origin/main', 'HEAD']) {
+    try {
+      const timestamp = execFileSync('git', ['log', '-1', '--format=%cI', ref, '--'], {
+        cwd: directory,
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+      }).trim()
+      if (timestamp) return new Date(timestamp).toISOString().slice(0, 10)
+    } catch { /* Try the next available ref. */ }
+  }
+  return null
+}
 
 export function parseHarness(filename: string, content: string): Harness {
   let toml: unknown
@@ -42,6 +58,6 @@ export async function generate(directory = catalogDirectory) {
     names.set(name, harness.id)
   }
 
-  const lastUpdated = harnesses.reduce((latest, harness) => harness.lastUpdated > latest ? harness.lastUpdated : latest, '')
+  const lastUpdated = mainCommitDate(directory)
   return { harnesses, lastUpdated, files }
 }

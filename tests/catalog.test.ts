@@ -26,14 +26,13 @@ describe('catalog integrity', () => {
     }
   })
 
-  test('Wingman retains preview status and audited repository metadata', () => {
+  test('Wingman retains preview status and project links', () => {
     const wingman = harnesses.find((harness) => harness.id === 'wingman')!
     expect(wingman.url).toBe('https://wingman.actor')
     expect(wingman.status).toBe('Preview')
     expect(wingman.language).toBe('Go')
     expect(wingman.provenance).toBe('website')
     expect(wingman.sourceUrl).toBe('https://docs.wingman.actor/')
-    expect(wingman.sourceCheckedAt).toBe('2026-10-18')
     expect(wingman.license).toBe('MIT')
     expect(wingman.stars).toBeGreaterThan(0)
   })
@@ -52,10 +51,9 @@ describe('catalog integrity', () => {
     expect(sources).not.toContain('Unknown')
     for (const [id, source, license] of audited) {
       const harness = harnesses.find((entry) => entry.id === id)!
-      expect(harness).toMatchObject({ source, license, licenseCheckedAt: '2026-10-18' })
+      expect(harness).toMatchObject({ source, license })
       expect(harness.licenseUrl).toMatch(/^https:\/\/github\.com\/.+\/LICENSE$/)
       expect(harness).not.toHaveProperty('license_url')
-      expect(harness).not.toHaveProperty('license_checked_at')
     }
   })
 
@@ -72,7 +70,7 @@ describe('catalog integrity', () => {
     expect(formatStars({ stars: undefined })).toBe('—')
   })
 
-  test('source dates display in UTC without shifting to the previous day', () => {
+  test('edit dates display in UTC without shifting to the previous day', () => {
     expect(formatDate('2026-10-09')).toBe('October 9, 2026')
   })
 })

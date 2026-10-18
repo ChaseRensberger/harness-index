@@ -6,7 +6,6 @@ import {
   ArrowUpRightIcon,
   ArrowsDownUpIcon,
   CaretDownIcon,
-  DownloadSimpleIcon,
   MagnifyingGlassIcon,
   XIcon,
 } from "@phosphor-icons/react";
@@ -76,10 +75,7 @@ const columns = columnHelper.columns([
           <span className="truncate">{row.original.name}</span>
           <ArrowUpRightIcon size={12} className="shrink-0 text-muted-foreground" />
         </Link>
-        <p
-          className="truncate text-[11px] text-muted-foreground"
-          title={row.original.description}
-        >
+        <p className="truncate text-[11px] text-muted-foreground" title={row.original.description}>
           {row.original.description}
         </p>
       </div>
@@ -109,7 +105,9 @@ const columns = columnHelper.columns([
     header: "Interfaces",
     sortFn: "text",
     cell: ({ getValue }) => (
-      <span className="truncate text-[11px] text-muted-foreground" title={getValue()}>{getValue() || "—"}</span>
+      <span className="truncate text-[11px] text-muted-foreground" title={getValue()}>
+        {getValue() || "—"}
+      </span>
     ),
   }),
   columnHelper.accessor("source", {
@@ -138,7 +136,7 @@ const columns = columnHelper.columns([
     cell: ({ row }) => (
       <span
         className="whitespace-nowrap tabular-nums"
-        title={`Snapshot: ${row.original.snapshot}. Approximate; not live. Ranges sort by their lower bound.`}
+        title="GitHub repository stars. Ranges sort by their lower bound."
       >
         {formatStars(row.original)}
       </span>
@@ -237,30 +235,6 @@ export function Catalog() {
     search.status,
   ].filter(Boolean).length;
 
-  function exportData() {
-    const payload = {
-      title: "Harness Index",
-      snapshot: lastUpdated,
-      notice:
-        "Static metadata snapshot. Sources and check dates are recorded per entry. Stars are repository counts, not live counts or product usage. Null means unknown.",
-      filters: search,
-      entries: rows.map(({ original }) => ({
-        ...original,
-        url: original.url ?? null,
-        stars: original.stars ?? null,
-        license: original.license ?? null,
-      })),
-    };
-    const url = URL.createObjectURL(
-      new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" }),
-    );
-    const anchor = document.createElement("a");
-    anchor.href = url;
-    anchor.download = `harness-index-${lastUpdated.slice(0, 7)}.json`;
-    anchor.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-  }
-
   return (
     <main id="main" className="catalog-main page-gutter flex min-h-0 flex-1 flex-col gap-6 py-6">
       <h1 className="sr-only">Harness Index</h1>
@@ -291,9 +265,11 @@ export function Catalog() {
             </button>
           )}
         </div>
-        <p className="text-right text-muted-foreground">
-          Last updated <time dateTime={lastUpdated}>{formatDate(lastUpdated)}</time>
-        </p>
+        {lastUpdated && (
+          <p className="text-right text-muted-foreground">
+            Last updated <time dateTime={lastUpdated}>{formatDate(lastUpdated)}</time>
+          </p>
+        )}
       </div>
 
       <section aria-label="Harness catalog" className="flex min-h-0 flex-1 flex-col gap-3">
@@ -371,8 +347,8 @@ export function Catalog() {
                 aria-label="Agent harness comparison"
               >
                 <caption className="sr-only">
-                  Agent harness comparison. Select column headings to
-                  sort; select a harness to see details and caveats.
+                  Agent harness comparison. Select column headings to sort; select a harness to see
+                  details and caveats.
                 </caption>
                 <TableHeader>
                   {table.getHeaderGroups().map((group) => (
@@ -408,7 +384,10 @@ export function Catalog() {
                               ) : direction === "asc" ? (
                                 <ArrowUpIcon size={12} className="text-orange" />
                               ) : (
-                                <ArrowsDownUpIcon size={12} className="text-muted-foreground opacity-50" />
+                                <ArrowsDownUpIcon
+                                  size={12}
+                                  className="text-muted-foreground opacity-50"
+                                />
                               )}
                             </button>
                             <TableResizeHandle
@@ -428,11 +407,16 @@ export function Catalog() {
                               onKeyDown={(event) => {
                                 const { minSize = 104, maxSize = 800 } = header.column.columnDef;
                                 const step = event.shiftKey ? 40 : 10;
-                                const width = event.key === "ArrowLeft" ? header.getSize() - step
-                                  : event.key === "ArrowRight" ? header.getSize() + step
-                                  : event.key === "Home" ? minSize
-                                  : event.key === "End" ? maxSize
-                                  : undefined;
+                                const width =
+                                  event.key === "ArrowLeft"
+                                    ? header.getSize() - step
+                                    : event.key === "ArrowRight"
+                                      ? header.getSize() + step
+                                      : event.key === "Home"
+                                        ? minSize
+                                        : event.key === "End"
+                                          ? maxSize
+                                          : undefined;
                                 if (width === undefined) return;
                                 event.preventDefault();
                                 table.setColumnSizing((previous) => ({
@@ -464,7 +448,9 @@ export function Catalog() {
                       {row.getAllCells().map((cell) => (
                         <TableCell
                           key={cell.id}
-                          className={cell.column.id === "stars" ? "justify-end text-right" : undefined}
+                          className={
+                            cell.column.id === "stars" ? "justify-end text-right" : undefined
+                          }
                           style={{ width: cell.column.getSize(), flexGrow: cell.column.getSize() }}
                         >
                           <table.FlexRender cell={cell} />
@@ -499,26 +485,31 @@ export function Catalog() {
             )}
           </TableContainer>
           <div className="flex flex-wrap items-center justify-between gap-3 border-t bg-muted/30 px-4 py-3 text-[10px] text-muted-foreground">
-            <span>
-              ~ approximate stars <span className="mx-2">/</span> — not recorded{" "}
-              <span className="mx-2 hidden sm:inline">/</span>
-              <span className="hidden sm:inline">Ranges sorted by lower bound</span>
-            </span>
-            <div className="flex flex-wrap items-center gap-4">
-              {Object.keys(table.state.columnSizing).length > 0 && (
-                <button className="underline hover:text-foreground" onClick={() => table.resetColumnSizing()}>
-                  Reset column widths
-                </button>
-              )}
-              <button
-                className="inline-flex items-center gap-2 hover:text-foreground disabled:opacity-40"
-                disabled={!rows.length}
-                onClick={exportData}
+            <p className="leading-5">
+              Information may be incorrect or out of date. If you notice something wrong, please{" "}
+              <a
+                href="https://github.com/ChaseRensberger/harness-index/issues/new"
+                className="underline hover:text-foreground"
               >
-                <DownloadSimpleIcon size={13} />
-                Export view .json
+                open an issue
+              </a>{" "}
+              or submit a{" "}
+              <a
+                href="https://github.com/ChaseRensberger/harness-index/pulls"
+                className="underline hover:text-foreground"
+              >
+                PR
+              </a>
+              .
+            </p>
+            {Object.keys(table.state.columnSizing).length > 0 && (
+              <button
+                className="underline hover:text-foreground"
+                onClick={() => table.resetColumnSizing()}
+              >
+                Reset column widths
               </button>
-            </div>
+            )}
           </div>
         </div>
       </section>

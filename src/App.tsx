@@ -1,5 +1,10 @@
 import { Link, Outlet } from "@tanstack/react-router";
 
+const addHarnessUrl = `https://github.com/ChaseRensberger/harness-index/issues/new?${new URLSearchParams({
+  title: "Add a harness: ",
+  body: "### Harness name\n\n\n### Website or repository\n\n\n### Short description\n\n",
+})}`;
+
 export default function App() {
   return (
     <div className="app-shell flex h-dvh flex-col">
@@ -18,18 +23,15 @@ export default function App() {
           </span>
         </Link>
         <nav aria-label="Main navigation" className="flex items-center gap-2 sm:gap-6">
-          <Link
-            to="/"
-            search={{}}
+          <a
+            href="https://github.com/ChaseRensberger/harness-index"
             className="nav-link"
-            activeProps={{ "data-active": true }}
-            activeOptions={{ exact: true }}
           >
-            Index
-          </Link>
-          <Link to="/methodology" className="nav-link" activeProps={{ "data-active": true }}>
-            Methodology
-          </Link>
+            GitHub
+          </a>
+          <a href={addHarnessUrl} className="nav-link">
+            Add your harness
+          </a>
         </nav>
       </header>
       <Outlet />

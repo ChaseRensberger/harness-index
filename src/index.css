@@ -81,10 +81,6 @@
   .status-preview, .status-uncertain, .status-maintenance { color: #dfac77; }
 }
 .source-open { border-color: color-mix(in srgb, #52784a 35%, transparent); background: color-mix(in srgb, #52784a 6%, transparent); }
-.method-section { display: grid; gap: 20px; padding-block: 32px; border-top: 1px solid var(--border); }
-.method-section p, .method-section li { font-size: 13px; line-height: 1.9; color: var(--muted-foreground); }
-.method-section h2 { font-size: 14px; font-weight: 550; }
-@media (min-width: 768px) { .method-section { grid-template-columns: 220px 1fr; gap: 48px; } }
 @media (max-width: 639px) {
   .site-header { gap: 12px; }
   .brand > span:last-child { font-size: 10px; }

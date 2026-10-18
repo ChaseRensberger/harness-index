@@ -18,11 +18,8 @@ export const HarnessFile = z.strictObject({
   description: nonEmpty,
   license: nonEmpty.optional(),
   license_url: z.url({ protocol: /^https$/ }).optional(),
-  license_checked_at: z.iso.date().optional(),
   provenance: z.enum(['catalog', 'website']),
   source_url: z.url({ protocol: /^https$/ }).optional(),
-  source_checked_at: z.iso.date().optional(),
-  snapshot: nonEmpty,
   last_updated: z.iso.date(),
 })
 
@@ -34,20 +31,15 @@ export const Harness = HarnessFile.extend({
 }).refine((entry) => entry.provenance !== 'website' || entry.source_url !== undefined, {
   path: ['source_url'],
   message: 'Website provenance requires a source URL',
-}).refine((entry) => entry.provenance !== 'website' || entry.source_checked_at !== undefined, {
-  path: ['source_checked_at'],
-  message: 'Website provenance requires a source check date',
-}).refine((entry) => (entry.license_url === undefined && entry.license_checked_at === undefined) || (entry.license !== undefined && entry.license_url !== undefined && entry.license_checked_at !== undefined), {
+}).refine((entry) => entry.license_url === undefined || entry.license !== undefined, {
   path: ['license_url'],
-  message: 'A license check requires a license, license URL, and check date',
-}).transform(({ stars_label, last_updated, source_url, source_checked_at, license_url, license_checked_at, ...entry }) => ({
+  message: 'A license URL requires a license',
+}).transform(({ stars_label, last_updated, source_url, license_url, ...entry }) => ({
   ...entry,
   starsLabel: stars_label,
   lastUpdated: last_updated,
   sourceUrl: source_url,
-  sourceCheckedAt: source_checked_at,
   licenseUrl: license_url,
-  licenseCheckedAt: license_checked_at,
 }))
 
 export type Harness = z.infer<typeof Harness>
