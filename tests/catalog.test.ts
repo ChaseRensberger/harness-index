@@ -64,9 +64,9 @@ describe('catalog integrity', () => {
   })
 
   test('star labels preserve ranges and unknowns', () => {
-    expect(formatStars({ stars: 209000, starsLabel: '209–212k' })).toBe('~209–212k')
-    expect(formatStars({ stars: 129500 })).toBe('~129.5k')
-    expect(formatStars({ stars: 29 })).toBe('~29')
+    expect(formatStars({ stars: 209000, starsLabel: '209–212k' })).toBe('209–212k')
+    expect(formatStars({ stars: 129500 })).toBe('129.5k')
+    expect(formatStars({ stars: 29 })).toBe('29')
     expect(formatStars({ stars: undefined })).toBe('—')
   })
 

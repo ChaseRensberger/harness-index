@@ -5,8 +5,8 @@ export { categories, interfaces, sources, statuses, type Category, type Interfac
 
 export function formatStars(harness: Pick<Harness, 'stars' | 'starsLabel'>) {
   if (harness.stars === undefined) return '—'
-  if (harness.starsLabel) return `~${harness.starsLabel}`
-  return `~${harness.stars >= 1000 ? `${Number((harness.stars / 1000).toFixed(1))}k` : harness.stars}`
+  if (harness.starsLabel) return harness.starsLabel
+  return `${harness.stars >= 1000 ? `${Number((harness.stars / 1000).toFixed(1))}k` : harness.stars}`
 }
 
 export function formatDate(date: string) {

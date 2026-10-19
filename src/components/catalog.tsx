@@ -375,9 +375,6 @@ export function Catalog() {
                             >
                               <span className="flex items-center gap-2">
                                 <table.FlexRender header={header} />
-                                {header.column.id === "stars" && (
-                                  <span className="text-[9px] text-muted-foreground">~</span>
-                                )}
                               </span>
                               {direction === "desc" ? (
                                 <ArrowDownIcon size={12} className="text-orange" />
